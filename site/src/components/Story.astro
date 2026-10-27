@@ -1,0 +1,35 @@
+---
+import { copy, photos } from "../lib/site";
+// Galería: hasta 5 fotos en mosaico irregular (no una cuadrícula uniforme).
+const gallery = photos.slice(0, 5);
+const spans = ["col-span-2 row-span-2", "", "", "col-span-2", ""];
+---
+
+<section class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+  <div class="grid gap-12 lg:grid-cols-12">
+    <div class="grid auto-rows-[9rem] grid-cols-3 gap-3 sm:auto-rows-[11rem] lg:col-span-7" data-reveal>
+      {gallery.map((p, i) => (
+        <figure class:list={["group overflow-hidden rounded-2xl border border-line bg-accent-soft", spans[i]]}>
+          <img src={p.src} alt="" loading="lazy" class="size-full object-cover transition duration-700 group-hover:scale-105" />
+        </figure>
+      ))}
+    </div>
+    <div class="flex flex-col justify-center lg:col-span-5 lg:pl-6" data-reveal>
+      <p class="section-label">04 — La historia</p>
+      <h2 class="mt-4 text-4xl leading-tight font-bold tracking-tight">{copy.story_title}</h2>
+      <p class="mt-5 text-lg leading-relaxed text-muted">{copy.story_body}</p>
+
+      <dl class="mt-10 divide-y divide-line border-y border-line">
+        {copy.faq.map((f) => (
+          <details class="group py-4">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold">
+              <dt>{f.question}</dt>
+              <span class="grid size-6 shrink-0 place-items-center rounded-full border border-line transition group-open:rotate-45 group-open:border-accent group-open:text-accent" aria-hidden="true">+</span>
+            </summary>
+            <dd class="mt-3 leading-relaxed text-muted">{f.answer}</dd>
+          </details>
+        ))}
+      </dl>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,96 @@
+{
+  "story_title": "La casa de los gatos en la 80C",
+  "story_body": "La Gatoria queda en la Cra. 80C #33-84, en Laureles. Ahí viven entre 15 y 18 gatos, y los humanos llegan de visita. La cocina es vegetariana y la tienda de mascotas está adentro. Las reglas son claras: no los coges, los miras de lejos y esperas a que se acerquen. Hay quien ha venido más de diez veces y quien celebra aquí sus cumpleaños. Hace poco se sumó un cine, el Teatro Orión.",
+  "reviews_title": "Lo que cuentan quienes ya vinieron",
+  "reviews_intro": "4,7 estrellas en más de 2.200 reseñas. La gente habla de los gatos, de los waffles de yuca y de las ganas de volver.",
+  "faq": [
+    {
+      "question": "¿Tengo que reservar?",
+      "answer": "Sí. El espacio es limitado y las reservas cuidan la calma de los gatos. Escribe por Instagram (@lagatoriacatcafe); según las reseñas, responden rápido."
+    },
+    {
+      "question": "¿Cuánto cuesta ir?",
+      "answer": "El rango de precio está entre COP 40.000 y 60.000. El Churu para darles a los gatos se compra aparte en la tienda de la casa."
+    },
+    {
+      "question": "¿Puedo cargar a los gatos?",
+      "answer": "No. Al llegar te explican las reglas: tú eres la visita y ellos deciden cuándo acercarse. No siempre salen todos, depende de su ánimo ese día."
+    },
+    {
+      "question": "¿Qué horario tienen?",
+      "answer": "Lunes a jueves de 2 a 8 p.m., viernes de 1 a 8 p.m., sábado de 1 a 9 p.m. y domingo de 1 a 7 p.m."
+    }
+  ],
+  "visit_title": "Cómo llegar y cuándo ir",
+  "visit_note": "Reserva por Instagram antes de salir y llega sin afán: el recorrido y la hora de galletitas toman su tiempo.",
+  "closing_title": "Los gatos te esperan en Laureles",
+  "closing_body": "Escribe por Instagram, aparta tu mesa y llega con calma para el recorrido. Lo demás lo deciden ellos.",
+  "seo_title": "La Gatoria | Cat café vegetariano en Laureles, Medellín",
+  "seo_description": "Cat café vegetariano en Laureles con 15 a 18 gatos, waffles de yuca, tienda de mascotas y Teatro Orión. Abre desde la 1 o 2 p.m. Reserva por Instagram.",
+  "hero": {
+    "eyebrow": "Cat café vegetariano · Laureles",
+    "headline": "Comida vegetariana en la casa de los michis",
+    "headline_highlight": "los michis",
+    "subheadline": "Un cat café en Laureles con menú vegetariano, waffles de yuca y entre 15 y 18 gatos que se acercan cuando ellos quieren. Reserva antes de venir.",
+    "primary_cta": "Reservar visita",
+    "secondary_cta": "Cómo llegar"
+  },
+  "value_proposition": {
+    "title": "Aquí los gatos mandan, y se nota",
+    "body": "Entras a la casa de ellos: te explican las reglas, te dan el recorrido y los gatos deciden si se acercan. Mientras tanto, comes vegetariano y pides postre. Por eso la gente vuelve con la pareja, con la mamá o para celebrar cumpleaños.",
+    "pillars": [
+      {
+        "title": "Gatos cuidados de verdad",
+        "body": "Las reglas de la casa protegen la tranquilidad de los gatos. Tú los admiras, les das Churu y esperas a que ellos busquen contacto.",
+        "evidence_quote": "todo está pensado para que su bienestar sea lo más importante",
+        "evidence_author": "laura leon"
+      },
+      {
+        "title": "Menú vegetariano con antojo",
+        "body": "Platos salados, platos fuertes, waffles de yuca, flan y bebidas de la casa. Todo vegetariano.",
+        "evidence_quote": "la comida es vegetariana y sumado a eso es super deliciosa",
+        "evidence_author": "Valeria Echeverri"
+      },
+      {
+        "title": "Te reciben y te muestran",
+        "body": "Al llegar te explican cómo convivir con los gatos y te llevan por la casa. El equipo responde rápido los mensajes de reserva.",
+        "evidence_quote": "En todas las ocasiones me han hecho tour",
+        "evidence_author": "Mar Mora"
+      }
+    ]
+  },
+  "services_title": "Qué hay en La Gatoria",
+  "services_intro": "Comida vegetariana, ratos con los gatos y unas cuantas cosas más dentro de la misma casa. El espacio es limitado, así que escribe para reservar.",
+  "services": [
+    {
+      "name": "Platos salados y entradas",
+      "description": "La ensalada de las hadas, el angelito punkero y las papas punkeritas. Hay entradas para compartir y platos fuertes, todo vegetariano.",
+      "tag": "Vegetariano"
+    },
+    {
+      "name": "Waffles de yuca y postres",
+      "description": "Dos waffles de yuca, como el enriquito fortachón, y un flan que la gente pide de nuevo.",
+      "tag": "Favorito"
+    },
+    {
+      "name": "Sodas, limonadas y cócteles",
+      "description": "Limonada de coco, la gata engreída, sodas de la casa y cócteles para acompañar la tarde.",
+      "tag": ""
+    },
+    {
+      "name": "Recorrido y cookie time",
+      "description": "Te dan el tour por la casa de los gatos. En la hora de galletitas les das las galletas con tu mano, y está el tren ronroneador.",
+      "tag": "Con gatos"
+    },
+    {
+      "name": "Tienda de mascotas",
+      "description": "Ahí mismo compras Churu para darles a los gatos y cosas para los tuyos en casa.",
+      "tag": ""
+    },
+    {
+      "name": "Teatro Orión",
+      "description": "Un teatro dentro de La Gatoria: proyectan películas cada 8 días y lo puedes reservar para eventos especiales.",
+      "tag": "Nuevo"
+    }
+  ]
+}

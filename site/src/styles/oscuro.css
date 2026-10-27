@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@import "@fontsource/permanent-marker/400.css";
+@import "@fontsource-variable/chivo-mono";
+@import "@fontsource-variable/big-shoulders-display";
+@import "@fontsource/dseg7-classic/700.css";
+
+/* Cuarto oscuro bajo luz de seguridad. El ámbar es del mundo, no del negocio:
+   la identidad de cada negocio llega con sus fotos al revelarse a todo color. */
+@theme {
+  --color-safelight: #f2a60c;
+  --color-safelight-hi: #ffb81f;
+  --color-tint: #e2a352;
+  --color-ink: #0e0e0e;
+  --color-deeproom: #4b2e07;
+  --color-enamel: #f6f1e6;
+  --color-silver: #8c8c8c;
+
+  --font-pencil: "Permanent Marker", "Chivo Mono Variable", cursive;
+  --font-mono: "Chivo Mono Variable", ui-monospace, monospace;
+  --font-label: "Big Shoulders Display Variable", "Chivo Mono Variable", sans-serif;
+  --font-lcd: "DSEG7 Classic", "Chivo Mono Variable", monospace;
+}
+
+/* --d: 0 = papel en blanco, 1 = copia revelada a todo color. */
+@property --d {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@layer base {
+  html {
+    background: var(--color-safelight);
+    color: var(--color-ink);
+    scrollbar-color: var(--color-deeproom) var(--color-tint);
+  }
+  body { font-family: var(--font-mono); font-size: 1rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  ::selection { background: var(--color-ink); color: var(--color-safelight-hi); }
+  :focus-visible { outline: 2px solid var(--color-ink); outline-offset: 3px; }
+  a { text-underline-offset: 0.2em; text-decoration-thickness: 1.5px; }
+}
+
+@layer components {
+  .rule { border-color: var(--color-ink); border-width: 0; }
+
+  .btn-print, .btn-line {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    min-height: 3.25rem; padding: 0 1.6rem;
+    font-family: var(--font-mono); font-weight: 600; font-size: .9rem; letter-spacing: .14em; text-transform: uppercase;
+    border: 1.5px solid var(--color-ink);
+    transition: background-color .15s, color .15s;
+  }
+  .btn-print { background: var(--color-safelight-hi); color: var(--color-ink); box-shadow: 0 2px 6px rgb(14 14 14 / .25); }
+  .btn-print:hover { background: var(--color-ink); color: var(--color-safelight-hi); }
+  .btn-line { background: transparent; color: var(--color-ink); }
+  .btn-line:hover { background: var(--color-deeproom); color: var(--color-enamel); border-color: var(--color-deeproom); }
+
+  .label { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; }
+  .lcd { font-family: var(--font-lcd); font-weight: 700; font-style: normal; letter-spacing: .04em; font-variant-numeric: tabular-nums; }
+
+  /* Copia fotográfica: aparece desde el papel en blanco hasta el color real. */
+  .print img {
+    filter:
+      grayscale(calc(1 - var(--d)))
+      brightness(calc(1 + (1 - var(--d)) * 1.9))
+      contrast(calc(.15 + var(--d) * .85));
+    transition: --d 2.4s cubic-bezier(.16, 1, .3, 1);
+  }
+  .print { --d: 0; transition: --d 2.4s cubic-bezier(.16, 1, .3, 1); }
+  .print.developed { --d: 1; }
+
+  .tray {
+    background: var(--color-enamel);
+    border: 1.5px solid var(--color-ink);
+    padding: clamp(.8rem, 2vw, 1.4rem);
+    box-shadow: inset 0 0 0 6px #e7dfcf, 0 18px 30px -12px rgb(75 46 7 / .55);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .print, .print img { transition: none; }
+  .print { --d: 1; }
+}

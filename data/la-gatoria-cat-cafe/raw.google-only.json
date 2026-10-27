@@ -1,0 +1,137 @@
+{
+  "source": "apify",
+  "place_id": "ChIJ1TALrL0pRI4REmY4UCiHods",
+  "name": "La Gatoria Cat Cafe",
+  "category": "Restaurante vegetariano",
+  "types": [
+    "Restaurante vegetariano"
+  ],
+  "rating": 4.7,
+  "review_count": 2214,
+  "address": "Cra. 80C #33-84, Laureles - Estadio, Medellín, Laureles, Medellín, Antioquia, Colombia",
+  "short_address": "Cra. 80C #33-84",
+  "phone": "+57 305 3949391",
+  "phone_intl": "+573053949391",
+  "website": "https://www.instagram.com/lagatoriacatcafe/",
+  "maps_url": "https://www.google.com/maps/search/?api=1&query=La%20Gatoria%20Cat%20Cafe&query_place_id=ChIJ1TALrL0pRI4REmY4UCiHods",
+  "location": {
+    "lat": 6.2397395,
+    "lng": -75.6022456
+  },
+  "summary": "Cafetería tranquila con comida ligera y postres, asientos al aire libre y ambiente con temática felina.",
+  "price_level": "COP 40-60 K",
+  "hours": [
+    {
+      "day": "Lunes",
+      "hours": "2 – 8 p. m."
+    },
+    {
+      "day": "Martes",
+      "hours": "2 – 8 p. m."
+    },
+    {
+      "day": "Miércoles",
+      "hours": "2 – 8 p. m."
+    },
+    {
+      "day": "Jueves",
+      "hours": "2 – 8 p. m."
+    },
+    {
+      "day": "Viernes",
+      "hours": "1 – 8 p. m."
+    },
+    {
+      "day": "Sábado",
+      "hours": "1 – 9 p. m."
+    },
+    {
+      "day": "Domingo",
+      "hours": "1 – 7 p. m."
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Laura Restrepo",
+      "rating": 5,
+      "text": "Fui a La Gatoria y quedé MATADA.\nAmé, amé y amé.\nLas sodas deliciosas, las dos entradas que pedimos 10/10 y los postres ni se diga: los dos waffles -estos son de yuca- que manejan y el flan  estaban deliciosos.\n\nEl ambiente súper tranquilo, como pa’ desconectarse del mundo, relajarse y parcharse un rato. Y los gatos... ay no, morí de amor. Me tocó contenerme pa’ no cogerlos a todos y llenarlos de besos porque obvio hay que respetar y dejar que ellos se acerquen cuando quieran, toca admirarlos de lejos. Les puedes dar Churu, que lo compras en la tienda ahí mismo, y hasta tienen una hora de galletitas donde tú misma se las das.\nVuelvo porque vuelvo. 5 estrellas 😌",
+      "when": "Hace 5 meses"
+    },
+    {
+      "author": "Mar Mora",
+      "rating": 5,
+      "text": "En las más de 10 ocasiones que he ido a este lugar, siempre me he sentido muy feliz, el personal es amable, atento. En todas las ocasiones me han hecho tour, y el establecimiento resalta por su limpieza, organización y sobre todo bien cuidado de todos sus gatitos. La comida es rica, las bebidas igual, y los postres maravillosos! Un lugar donde no duele gastar, porque uno queda muy contento siempre. A parte, me encanta ir a la tienda de mascotas que tienen, siempre que voy compro algo, porque es buena la atención, los precios están perfectos, la variedad de cosas y su calidad. De los mejores lugares para ir, si eres una persona TRANQUILA, que aprecias el contacto con gatos. Siempre y cuando respetes que estás EN LA CASA DE ELLOS. Tú eres la visita, por lo tanto, hay que acatar las reglas, ya que los gatos son animalitos que necesitan mucha tranquilidad.",
+      "when": "Hace un año"
+    },
+    {
+      "author": "laura leon",
+      "rating": 5,
+      "text": "Definitivamente la Gatoría es el lugar más hermoso que hay, te reciben con cariño, te informan las reglas (que son ideales para compartir el espacio y la sana convivencia), los gaticos son hermosos, y todo está pensado para que su bienestar sea lo más importante, la comida es una delicia, mi favorito la ensalada de las hadas y angelito punkero, las papas punkeritas, la limonada de coco, gata engreída, el waffle enriquito fortachon 🤤 ay noo todo!!, el recorrido por la casa, el cookie time, el tren ronroneador, definitivamente todo es una maravilla, uno va y se siente taaaan bien, super mega recomendado. Eso si hay que tener en cuenta las reglas de la casa y que para ir siempre hacer la reserva, por la seguridad y comodidad de los michis y la comodidad humana también",
+      "when": "Hace un año"
+    },
+    {
+      "author": "Valeria Echeverri",
+      "rating": 5,
+      "text": "El mejor lugar que he podido encontrar, he celebrado cumpleaños, he ido con mi pareja, con mi mamá y con amigas.. Cualquier plan encaja perfecto con la energía de este lugar 🩷 la comida es vegetariana y sumado a eso es super deliciosa y obviamente el pluss de tener la compañía tan perfecta de los michis hace que todo sea perfecto allí.\n¡No se pierdan la oportunidad de conocer este lugar!\nTambién hace poco inauguraron un Teatro allí mismo, “Teatro Orión” y pueden ir a ver pelis cada 8 días y pueden reservarlo para eventos especiales 😍😍😍😍",
+      "when": "Fecha de edición: Hace 2 años"
+    },
+    {
+      "author": "Yessenia Alejandra Matute",
+      "rating": 5,
+      "text": "Un lugar específicamente para los cat lovers (amantes de los gatos), se convive con ellos, se come rico, te dan un tour por las instalaciones pensadas específicamente para los gatitos (hay entre 15 y 18 gatitos), no los vas a ver todos juntos, todo depende del ánimo en el que estén, pero son muy sociables y amigables. Comida salada, dulce, platos fuertes, cócteles, limonadas, postres, etc, en pocas palabras amplio menú. Ojo, hay que reservar por el espacio, fueron super amables y contestaron el mensaje super rápido.",
+      "when": "Hace 2 años"
+    }
+  ],
+  "city": "Medellín",
+  "slug": "la-gatoria-cat-cafe",
+  "photos": [
+    {
+      "file": "photo-1.jpg",
+      "width": null,
+      "height": null,
+      "attribution": "Google Maps"
+    },
+    {
+      "file": "photo-2.jpg",
+      "width": null,
+      "height": null,
+      "attribution": "Google Maps"
+    },
+    {
+      "file": "photo-3.jpg",
+      "width": null,
+      "height": null,
+      "attribution": "Google Maps"
+    },
+    {
+      "file": "photo-4.jpg",
+      "width": null,
+      "height": null,
+      "attribution": "Google Maps"
+    },
+    {
+      "file": "photo-5.jpg",
+      "width": null,
+      "height": null,
+      "attribution": "Google Maps"
+    },
+    {
+      "file": "photo-6.jpg",
+      "width": null,
+      "height": null,
+      "attribution": "Google Maps"
+    },
+    {
+      "file": "photo-7.jpg",
+      "width": null,
+      "height": null,
+      "attribution": "Google Maps"
+    },
+    {
+      "file": "photo-8.jpg",
+      "width": null,
+      "height": null,
+      "attribution": "Google Maps"
+    }
+  ]
+}

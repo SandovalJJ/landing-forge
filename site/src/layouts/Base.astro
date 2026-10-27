@@ -1,0 +1,64 @@
+---
+import "../styles/global.css";
+import { business, copy, palette, photo } from "../lib/site";
+
+const cssVars = Object.entries(palette)
+  .map(([k, v]) => `--c-${k}:${v}`)
+  .join(";");
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: business.name,
+  address: business.address,
+  telephone: business.phone_intl ?? business.phone,
+  url: business.website,
+  image: photo(0).src,
+  geo: business.location && { "@type": "GeoCoordinates", latitude: business.location.lat, longitude: business.location.lng },
+  aggregateRating: business.rating && {
+    "@type": "AggregateRating",
+    ratingValue: business.rating,
+    reviewCount: business.review_count,
+  },
+};
+---
+
+<!doctype html>
+<html lang="es" style={cssVars}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{copy.seo_title}</title>
+    <meta name="description" content={copy.seo_description} />
+    <meta name="theme-color" content={palette.accent} />
+    <meta property="og:title" content={copy.seo_title} />
+    <meta property="og:description" content={copy.seo_description} />
+    <meta property="og:image" content={photo(0).src} />
+    <link rel="preload" as="image" href={photo(0).src} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body class="min-h-dvh overflow-x-clip">
+    <slot />
+    <script>
+      // Foco de luz de las tarjetas .spotlight
+      document.querySelectorAll<HTMLElement>(".spotlight").forEach((el) => {
+        el.addEventListener("pointermove", (e) => {
+          const r = el.getBoundingClientRect();
+          el.style.setProperty("--x", `${e.clientX - r.left}px`);
+          el.style.setProperty("--y", `${e.clientY - r.top}px`);
+        });
+      });
+      // Aparición al hacer scroll
+      const io = new IntersectionObserver(
+        (entries) => entries.forEach((en) => en.isIntersecting && (en.target.classList.add("is-in"), io.unobserve(en.target))),
+        { rootMargin: "0px 0px -10% 0px" },
+      );
+      document.querySelectorAll("[data-reveal]").forEach((el) => io.observe(el));
+    </script>
+    <style is:global>
+      [data-reveal] { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+      [data-reveal].is-in { opacity: 1; transform: none; }
+      @media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1; transform: none; transition: none; } }
+    </style>
+  </body>
+</html>

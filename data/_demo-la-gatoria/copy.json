@@ -1,0 +1,96 @@
+{
+  "story_title": "Un café de gatos en Laureles",
+  "story_body": "La Gatoria queda en la Cra. 80C, en Laureles - Estadio. Es una cafetería tranquila donde los gatos comparten el espacio con las mesas y la cocina solo prepara comida vegetariana: platos ligeros, bebidas y postres. Hay asientos al aire libre para quien prefiera comer afuera. Quienes vienen hablan de la labor que se hace con los gatos y de lo bien que se portan mientras uno come.",
+  "reviews_title": "Lo que cuentan quienes ya vinieron",
+  "reviews_intro": "La Gatoria tiene 4,7 estrellas en 2.215 reseñas. Estas son dos de ellas, con lo bueno y con el aviso sobre el precio.",
+  "faq": [
+    {
+      "question": "¿Tengo que reservar?",
+      "answer": "Sí. Las reseñas cuentan que hay que reservar y pagar por anticipado el valor mínimo de cada persona. Hazlo antes de salir de casa."
+    },
+    {
+      "question": "¿Cuánto cuesta ir?",
+      "answer": "El mínimo que se paga por adelantado es de $25.000 por persona. Algunos clientes lo ven un poco costoso, pero dicen que vale la pena por la comida y los gatos."
+    },
+    {
+      "question": "¿Hay opciones con carne?",
+      "answer": "No. Toda la carta es vegetariana, desde las entradas hasta los postres."
+    },
+    {
+      "question": "¿Cuál es el horario?",
+      "answer": "No tenemos el horario publicado aquí. Confírmalo al momento de hacer tu reserva para no llegar con el café cerrado."
+    }
+  ],
+  "visit_title": "Cómo llegar a La Gatoria",
+  "visit_note": "Haz tu reserva y el pago del mínimo antes de ir; así llegas a la Cra. 80C #33-84 con tu mesa lista.",
+  "closing_title": "Aparta tu mesa con los gatos",
+  "closing_body": "Reserva, paga el mínimo por persona y ven a Laureles con hambre. Pide una soda, comparte las entradas y no te vayas sin probar un postre.",
+  "seo_title": "La Gatoria: cat café vegetariano en Laureles, Medellín",
+  "seo_description": "Cat café vegetariano en Laureles, Medellín. Sodas, entradas y postres con gatos tranquilos. 4,7 estrellas en más de 2.200 reseñas. Reserva antes de ir.",
+  "hero": {
+    "eyebrow": "Cat café vegetariano · Laureles",
+    "headline": "Come vegetariano rodeado de gatos en Laureles",
+    "headline_highlight": "rodeado de gatos",
+    "subheadline": "Sodas, entradas y postres vegetarianos con los gatos de la casa cerca. Reserva antes: se paga por anticipado un mínimo de $25.000 por persona.",
+    "primary_cta": "Reservar mesa",
+    "secondary_cta": "Cómo llegar"
+  },
+  "value_proposition": {
+    "title": "Buena comida vegetariana y gatos tranquilos",
+    "body": "La gente vuelve por la comida: las sodas, las entradas y los postres salen en casi todas las reseñas. Toda la carta es vegetariana y los gatos se portan juiciosos mientras comes. No es barato y hay que reservar con pago anticipado, pero quienes vienen dicen que vale la pena.",
+    "pillars": [
+      {
+        "title": "Sodas, entradas y postres",
+        "body": "Pide una soda de la casa, comparte un par de entradas y deja espacio para el postre. Es lo que más recomiendan quienes ya vinieron.",
+        "evidence_quote": "Las sodas deliciosas, las dos entradas que pedimos 10/10 y los postres ni se diga.",
+        "evidence_author": "Laura Restrepo"
+      },
+      {
+        "title": "Gatos que se portan bien",
+        "body": "Los gatos andan por el café con calma, así que puedes comer sin que te roben el plato. Ellos son la razón de ser del lugar.",
+        "evidence_quote": "Me encanta la labor, los gatos son súper juiciosos.",
+        "evidence_author": "Valentina Agudelo"
+      },
+      {
+        "title": "Toda la carta vegetariana",
+        "body": "Aquí no tienes que revisar la carta buscando la opción sin carne. Todo lo que sale de la cocina es vegetariano.",
+        "evidence_quote": "Toda es vegetariana, lo que más me encanta.",
+        "evidence_author": "Valentina Agudelo"
+      }
+    ]
+  },
+  "services_title": "Qué vas a encontrar",
+  "services_intro": "Comida ligera, bebidas y postres, todo vegetariano, con los gatos de compañía. Ten en cuenta que se reserva y se paga un consumo mínimo por persona antes de venir.",
+  "services": [
+    {
+      "name": "Entradas para compartir",
+      "description": "Platos vegetarianos para picar en la mesa. Pide dos y repártelas: así lo hacen quienes salen hablando de ellas.",
+      "tag": "Vegetariano"
+    },
+    {
+      "name": "Sodas de la casa",
+      "description": "Bebidas frías para acompañar la comida mientras los gatos pasan cerca de tu mesa.",
+      "tag": "Favorito"
+    },
+    {
+      "name": "Postres",
+      "description": "El cierre que más mencionan las reseñas. Guarda espacio, que vale la pena.",
+      "tag": "Recomendado"
+    },
+    {
+      "name": "Tiempo con los gatos",
+      "description": "Los gatos de la casa comparten el espacio contigo. Son tranquilos y juiciosos, ideales para quedarte un rato largo.",
+      "tag": ""
+    },
+    {
+      "name": "Mesas al aire libre",
+      "description": "Si prefieres comer afuera, hay asientos al aire libre en la sede de la Cra. 80C, en Laureles - Estadio.",
+      "tag": ""
+    },
+    {
+      "name": "Reserva con consumo mínimo",
+      "description": "Reserva antes de venir y paga por anticipado el mínimo de $25.000 por persona. Ese valor se te abona a lo que pidas.",
+      "tag": "Importante"
+    }
+  ]
+}

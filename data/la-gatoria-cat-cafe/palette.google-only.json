@@ -1,0 +1,29 @@
+{
+  "source_images": [
+    "photo-1.jpg",
+    "photo-2.jpg",
+    "photo-3.jpg",
+    "photo-4.jpg",
+    "photo-5.jpg"
+  ],
+  "extracted": [
+    "#3d3027",
+    "#d3c4b2",
+    "#947b68",
+    "#a8a7a0",
+    "#75736e",
+    "#7a83ab"
+  ],
+  "dominant": "#40332b",
+  "tokens": {
+    "bg": "#fbf9f6",
+    "surface": "#fefefd",
+    "ink": "#241c14",
+    "muted": "#6f6152",
+    "border": "#e8e0d9",
+    "accent": "#c97b31",
+    "accent-2": "#cda956",
+    "accent-fg": "#241c14",
+    "accent-soft": "#f7eade"
+  }
+}

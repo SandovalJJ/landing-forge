@@ -1,0 +1,235 @@
+{
+  "source": "apify",
+  "place_id": "ChIJ1TALrL0pRI4REmY4UCiHods",
+  "name": "La Gatoria Cat Cafe",
+  "category": "Restaurante vegetariano",
+  "types": [
+    "Restaurante vegetariano"
+  ],
+  "rating": 4.7,
+  "review_count": 2214,
+  "address": "Cra. 80C #33-84, Laureles - Estadio, Medellín, Laureles, Medellín, Antioquia, Colombia",
+  "short_address": "Cra. 80C #33-84",
+  "phone": "+57 305 3949391",
+  "phone_intl": "+573053949391",
+  "website": "https://www.instagram.com/lacasadelosgatosfelices/",
+  "maps_url": "https://www.google.com/maps/search/?api=1&query=La%20Gatoria%20Cat%20Cafe&query_place_id=ChIJ1TALrL0pRI4REmY4UCiHods",
+  "location": {
+    "lat": 6.2397395,
+    "lng": -75.6022456
+  },
+  "summary": "Cafetería tranquila con comida ligera y postres, asientos al aire libre y ambiente con temática felina.",
+  "price_level": "COP 40-60 K",
+  "hours": [
+    {
+      "day": "Lunes",
+      "hours": "2 – 8 p. m."
+    },
+    {
+      "day": "Martes",
+      "hours": "2 – 8 p. m."
+    },
+    {
+      "day": "Miércoles",
+      "hours": "2 – 8 p. m."
+    },
+    {
+      "day": "Jueves",
+      "hours": "2 – 8 p. m."
+    },
+    {
+      "day": "Viernes",
+      "hours": "1 – 8 p. m."
+    },
+    {
+      "day": "Sábado",
+      "hours": "1 – 9 p. m."
+    },
+    {
+      "day": "Domingo",
+      "hours": "1 – 7 p. m."
+    }
+  ],
+  "reviews": [
+    {
+      "author": "Laura Restrepo",
+      "rating": 5,
+      "text": "Fui a La Gatoria y quedé MATADA.\nAmé, amé y amé.\nLas sodas deliciosas, las dos entradas que pedimos 10/10 y los postres ni se diga: los dos waffles -estos son de yuca- que manejan y el flan  estaban deliciosos.\n\nEl ambiente súper tranquilo, como pa’ desconectarse del mundo, relajarse y parcharse un rato. Y los gatos... ay no, morí de amor. Me tocó contenerme pa’ no cogerlos a todos y llenarlos de besos porque obvio hay que respetar y dejar que ellos se acerquen cuando quieran, toca admirarlos de lejos. Les puedes dar Churu, que lo compras en la tienda ahí mismo, y hasta tienen una hora de galletitas donde tú misma se las das.\nVuelvo porque vuelvo. 5 estrellas 😌",
+      "when": "Hace 5 meses"
+    },
+    {
+      "author": "Mar Mora",
+      "rating": 5,
+      "text": "En las más de 10 ocasiones que he ido a este lugar, siempre me he sentido muy feliz, el personal es amable, atento. En todas las ocasiones me han hecho tour, y el establecimiento resalta por su limpieza, organización y sobre todo bien cuidado de todos sus gatitos. La comida es rica, las bebidas igual, y los postres maravillosos! Un lugar donde no duele gastar, porque uno queda muy contento siempre. A parte, me encanta ir a la tienda de mascotas que tienen, siempre que voy compro algo, porque es buena la atención, los precios están perfectos, la variedad de cosas y su calidad. De los mejores lugares para ir, si eres una persona TRANQUILA, que aprecias el contacto con gatos. Siempre y cuando respetes que estás EN LA CASA DE ELLOS. Tú eres la visita, por lo tanto, hay que acatar las reglas, ya que los gatos son animalitos que necesitan mucha tranquilidad.",
+      "when": "Hace un año"
+    },
+    {
+      "author": "laura leon",
+      "rating": 5,
+      "text": "Definitivamente la Gatoría es el lugar más hermoso que hay, te reciben con cariño, te informan las reglas (que son ideales para compartir el espacio y la sana convivencia), los gaticos son hermosos, y todo está pensado para que su bienestar sea lo más importante, la comida es una delicia, mi favorito la ensalada de las hadas y angelito punkero, las papas punkeritas, la limonada de coco, gata engreída, el waffle enriquito fortachon 🤤 ay noo todo!!, el recorrido por la casa, el cookie time, el tren ronroneador, definitivamente todo es una maravilla, uno va y se siente taaaan bien, super mega recomendado. Eso si hay que tener en cuenta las reglas de la casa y que para ir siempre hacer la reserva, por la seguridad y comodidad de los michis y la comodidad humana también",
+      "when": "Hace un año"
+    },
+    {
+      "author": "Valeria Echeverri",
+      "rating": 5,
+      "text": "El mejor lugar que he podido encontrar, he celebrado cumpleaños, he ido con mi pareja, con mi mamá y con amigas.. Cualquier plan encaja perfecto con la energía de este lugar 🩷 la comida es vegetariana y sumado a eso es super deliciosa y obviamente el pluss de tener la compañía tan perfecta de los michis hace que todo sea perfecto allí.\n¡No se pierdan la oportunidad de conocer este lugar!\nTambién hace poco inauguraron un Teatro allí mismo, “Teatro Orión” y pueden ir a ver pelis cada 8 días y pueden reservarlo para eventos especiales 😍😍😍😍",
+      "when": "Fecha de edición: Hace 2 años"
+    },
+    {
+      "author": "Yessenia Alejandra Matute",
+      "rating": 5,
+      "text": "Un lugar específicamente para los cat lovers (amantes de los gatos), se convive con ellos, se come rico, te dan un tour por las instalaciones pensadas específicamente para los gatitos (hay entre 15 y 18 gatitos), no los vas a ver todos juntos, todo depende del ánimo en el que estén, pero son muy sociables y amigables. Comida salada, dulce, platos fuertes, cócteles, limonadas, postres, etc, en pocas palabras amplio menú. Ojo, hay que reservar por el espacio, fueron super amables y contestaron el mensaje super rápido.",
+      "when": "Hace 2 años"
+    }
+  ],
+  "city": "Medellín",
+  "slug": "la-gatoria-cat-cafe",
+  "photos": [
+    {
+      "file": "ig-1.jpg",
+      "width": 3072,
+      "height": 4096,
+      "attribution": "@lacasadelosgatosfelices en Instagram",
+      "source": "instagram",
+      "subject": "lugar",
+      "alt": "Gato blanco y negro de cola esponjosa sobre mesa de madera junto a rascador y repisas para gatos",
+      "caption": "Álbum familiar 😻✨",
+      "url": "https://www.instagram.com/p/DcbubdqG8Io/"
+    },
+    {
+      "file": "ig-2.jpg",
+      "width": 3072,
+      "height": 4096,
+      "attribution": "@lacasadelosgatosfelices en Instagram",
+      "source": "instagram",
+      "subject": "gatos",
+      "alt": "Gato blanco y negro sentado en patio interior blanco con luces colgantes y plantas",
+      "caption": "Álbum familiar 😻✨",
+      "url": "https://www.instagram.com/p/DcbubdqG8Io/"
+    },
+    {
+      "file": "ig-3.jpg",
+      "width": 1200,
+      "height": 1600,
+      "attribution": "@lacasadelosgatosfelices en Instagram",
+      "source": "instagram",
+      "subject": "gatos",
+      "alt": "Tres gatos blancos y negros posando juntos sobre el piso del café con luz rosada",
+      "caption": "Álbum familiar 😻✨",
+      "url": "https://www.instagram.com/p/DcbubdqG8Io/"
+    },
+    {
+      "file": "ig-4.jpg",
+      "width": 3072,
+      "height": 4096,
+      "attribution": "@lacasadelosgatosfelices en Instagram",
+      "source": "instagram",
+      "subject": "lugar",
+      "alt": "Gata carey dentro de juguete circular verde sobre mesa, con el salón del café al fondo",
+      "caption": "Álbum familiar 😻✨",
+      "url": "https://www.instagram.com/p/DcbubdqG8Io/"
+    },
+    {
+      "file": "ig-5.jpg",
+      "width": 3024,
+      "height": 4032,
+      "attribution": "@lacasadelosgatosfelices en Instagram",
+      "source": "instagram",
+      "subject": "detalle",
+      "alt": "Gato negro sobre sillón antiguo de madera tallada con tapizado azul y estampado floral",
+      "caption": "Álbum familiar 😻✨",
+      "url": "https://www.instagram.com/p/DcbubdqG8Io/"
+    },
+    {
+      "file": "ig-6.jpg",
+      "width": 3024,
+      "height": 4032,
+      "attribution": "@lacasadelosgatosfelices en Instagram",
+      "source": "instagram",
+      "subject": "gatos",
+      "alt": "Gato persa blanco en silla y gato blanco y negro sobre mesa de madera",
+      "caption": "Álbum familiar 😻✨",
+      "url": "https://www.instagram.com/p/DcbubdqG8Io/"
+    },
+    {
+      "file": "ig-7.jpg",
+      "width": 1200,
+      "height": 1600,
+      "attribution": "@lacasadelosgatosfelices en Instagram",
+      "source": "instagram",
+      "subject": "gatos",
+      "alt": "Gato blanco y negro durmiendo plácidamente sobre una manta estampada con gatitos",
+      "caption": "Álbum familiar 😻✨",
+      "url": "https://www.instagram.com/p/DcbubdqG8Io/"
+    },
+    {
+      "file": "ig-8.jpg",
+      "width": 960,
+      "height": 1280,
+      "attribution": "@lacasadelosgatosfelices en Instagram",
+      "source": "instagram",
+      "subject": "gatos",
+      "alt": "Dos gatos, uno blanco y negro y otro blanco, acurrucados en una cama gris",
+      "caption": "Blanquita de Peluche y su hijo Bombón ✨💕",
+      "url": "https://www.instagram.com/p/DbG2TBpj1RG/"
+    },
+    {
+      "file": "ig-9.jpg",
+      "width": 3024,
+      "height": 4032,
+      "attribution": "@lacasadelosgatosfelices en Instagram",
+      "source": "instagram",
+      "subject": "gatos",
+      "alt": "Gato blanco y negro de ojos verdes asomado dentro de una caja de cartón",
+      "caption": "Álbum familiar 😻✨",
+      "url": "https://www.instagram.com/p/DcbubdqG8Io/"
+    },
+    {
+      "file": "ig-10.jpg",
+      "width": 3024,
+      "height": 4032,
+      "attribution": "@lacasadelosgatosfelices en Instagram",
+      "source": "instagram",
+      "subject": "gatos",
+      "alt": "Gata atigrada boca arriba sobre alfombra tejida mirando a la cámara",
+      "caption": "Álbum familiar 😻✨",
+      "url": "https://www.instagram.com/p/DcbubdqG8Io/"
+    },
+    {
+      "file": "photo-1.jpg",
+      "width": null,
+      "height": null,
+      "attribution": "Google Maps"
+    },
+    {
+      "file": "photo-2.jpg",
+      "width": null,
+      "height": null,
+      "attribution": "Google Maps"
+    }
+  ],
+  "instagram": {
+    "username": "lacasadelosgatosfelices",
+    "url": "https://www.instagram.com/lacasadelosgatosfelices/",
+    "full_name": "La Gatoria Cat Cafe",
+    "bio": "La Casa de los Gatos Felices\nAtendemos solo con reservación😺Niños mayores de 10 años\n@lagatoria.store 😸",
+    "external_url": "https://drive.google.com/file/d/1FQV6O5UajURP0NIwOae2npd01-60x2fL/view?usp=drive_link",
+    "category": "None",
+    "followers": 88423,
+    "posts_count": null,
+    "captions": [
+      "🕯️🐾 OCTUBRE: UN HOMENAJE AL AMOR QUE TRASCIENDE\n\nEn La Casa de los Gatos Felices recordamos a nuestros animalitos que partieron, pero siguen viviendo en nuestro corazón. ❤️\n\n✨ 27 DE OCTUBRE | 4:00 P. M.\nHonremos a nuestros animalitos trascendidos\n\nMeditación, charla sobre el duelo con Mónica de Alma Infinita y decoración de galletas inspiradas en sus manchitas. Trae una foto de tu peludito para nu",
+      "🌈🐾 MÁS ALLÁ DEL ARCOÍRIS\nPorque hay amores que trascienden la muerte. 💜\n\n🕯️ Inspirados en la hermosa tradición mexicana del Día de Muertos, nos reuniremos para honrar la vida de nuestros animales de compañía que ya no están físicamente, pero que siguen habitando nuestro corazón.\n\n🎙️ Te invito a un episodio muy especial de Un Té con Mía, en vivo, donde conversaremos sobre la muerte, el duelo animal",
+      "✨ ¿Y si tu próxima dosis de calma viene acompañada de 20 gatos? 🐈\n\nEste sábado queremos invitarte a hacer una pausa… pero una pausa de esas que se sienten bonito. \n\nVen a practicar Yoga entre Gatos en La Casa de Los Gatos Felices, un espacio donde podrás respirar profundo, mover tu cuerpo, soltar tensiones y dejar que la tranquilidad de nuestros michis te acompañe durante la clase. 🧘🏻‍♀️🐾\n\nPorque ",
+      "El álbum familiar que tanto amamos 🐼🏰☕️😻",
+      "🕯️HONREMOS A NUESTROS ANIMALITOS TRASCENDIDOS 🙏\n\nHay amores que no terminan cuando su cuerpo parte. Se quedan en nuestros recuerdos, en nuestras fotografías, en los rincones de la casa y en esa huellita invisible que dejaron para siempre en nuestro corazón. ✨\n\nEste 27 de octubre, en La Casa de los Gatos Felices, queremos unirnos a la tradición mexicana para crear un espacio de amor, memoria y home",
+      "A la gente guapa y con actitud increíble le encanta pasar las tardes con Los Gatos Felices 😻 … Replicó Hettor, uno de los hermanos Chipuco",
+      "Hay amores que cambian de forma, pero nunca dejan de existir. 🤍🐾 Cuando uno de nuestros animales trasciende, quedan preguntas, recuerdos, palabras que quizás no alcanzamos a decir y, sobre todo, un amor inmenso que sigue habitando nuestro corazón.\n\nPor eso quiero invitarte a vivir un encuentro muy especial en La Gatoria – La Casa de los Gatos Felices. \n\nUn espacio para honrar a nuestros animales q",
+      "En La Casa de los Gatos Felices, su mensaje vive cada día. Vive en cada michi que encontró refugio después del abandono, en cada tratamiento que alivia su dolor, en cada plato de comida servido con amor y en cada vida que decidimos proteger.\n\nPorque cuidar a un animal es reconocer su valor, respetar su existencia y comprender que no somos dueños de este mundo, sino compañeros de viaje de todas las",
+      "✨ ¿Y si tu próxima dosis de calma viene acompañada de 20 gatos? 🐈\n\nEste sábado queremos invitarte a hacer una pausa… pero una pausa de esas que se sienten bonito. \n\nVen a practicar Yoga entre Gatos en La Casa de Los Gatos Felices, un espacio donde podrás respirar profundo, mover tu cuerpo, soltar tensiones y dejar que la tranquilidad de nuestros michis te acompañe durante la clase. 🧘🏻‍♀️🐾\n\nPorque ",
+      "Hay gatos que llegan a nuestra vida para enseñarnos a sentir, a soltar y a conectar con una energía que va mucho más allá de las palabras. 💫\n\nEste sábado 12 de septiembre abrimos las puertas de la Casa de los Gatos Felices para vivir una experiencia especial de conexión y sanación energética junto a nuestros gatos. 😻✨\n\nDurante este encuentro aprenderemos a trabajar con varitas de cuarzo cristal y ",
+      "Únete a nuestras clases de yoga con gatos en @lacasadelosgatosfelices",
+      "Cuenta la leyenda que a parte de amarnos, nuestros gatos nos conceden deseos de amor. Si!, cuando encuentras un bigote de tu michi en casa, es porque el mismo lo puso como un hilo cargado de energía que al tú tocarlo con un deseo que viene desde el corazón se hará real si lo pones en un lugar seguro 😻\nEl Sr Bigotes será el guardián de esos pequeños tesoros, encargado de sostener tus deseos hasta q"
+    ]
+  }
+}

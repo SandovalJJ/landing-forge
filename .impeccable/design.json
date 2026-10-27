@@ -1,0 +1,546 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-25T12:00:00Z",
+  "title": "Design System: landing-forge, «El muro de la casa»",
+  "extensions": {
+    "colorMeta": {
+      "wall": {
+        "role": "primary",
+        "displayName": "Wall Paint (variable)",
+        "canonical": "var(--c-wall), default #5c2a20",
+        "tonalRamp": [
+          "#1d0100",
+          "#3e150e",
+          "#603026",
+          "#834d42",
+          "#a56d61",
+          "#c68f83",
+          "#e8b7ac",
+          "#ffe5dd"
+        ]
+      },
+      "wall-deep": {
+        "role": "primary",
+        "displayName": "Deep Wall (derived)",
+        "canonical": "color-mix(in oklab, var(--c-wall) 72%, black)",
+        "tonalRamp": [
+          "#190503",
+          "#381b15",
+          "#58352e",
+          "#79524b",
+          "#9a726a",
+          "#bb948c",
+          "#debbb3",
+          "#ffe8e2"
+        ]
+      },
+      "neon": {
+        "role": "tertiary",
+        "displayName": "Neon (variable)",
+        "canonical": "var(--c-neon), default #ff4fa3",
+        "tonalRamp": [
+          "#32000e",
+          "#5d0028",
+          "#880045",
+          "#b10063",
+          "#d72883",
+          "#fa5ca4",
+          "#ff90c9",
+          "#ffccf2"
+        ]
+      },
+      "gilt": {
+        "role": "secondary",
+        "displayName": "Gilt",
+        "canonical": "#b8912f",
+        "tonalRamp": [
+          "#1b0400",
+          "#3a1c00",
+          "#5a3800",
+          "#7b5700",
+          "#9c7707",
+          "#bd9945",
+          "#dfc07c",
+          "#ffecbc"
+        ]
+      },
+      "gilt-dark": {
+        "role": "secondary",
+        "displayName": "Gilt Dark",
+        "canonical": "#7a5c16",
+        "tonalRamp": [
+          "#180600",
+          "#361f00",
+          "#563a00",
+          "#765811",
+          "#977839",
+          "#b79a60",
+          "#dac18f",
+          "#ffecc8"
+        ]
+      },
+      "gilt-light": {
+        "role": "secondary",
+        "displayName": "Gilt Light",
+        "canonical": "#d4b45c",
+        "tonalRamp": [
+          "#180600",
+          "#371f00",
+          "#563b00",
+          "#775900",
+          "#97791b",
+          "#b89b4d",
+          "#dbc281",
+          "#ffedbf"
+        ]
+      },
+      "brass": {
+        "role": "secondary",
+        "displayName": "Brass",
+        "canonical": "#c9a24d",
+        "tonalRamp": [
+          "#1a0500",
+          "#391d00",
+          "#5a3800",
+          "#7b5700",
+          "#9c771d",
+          "#bc994e",
+          "#dfc082",
+          "#ffecbf"
+        ]
+      },
+      "engrave": {
+        "role": "secondary",
+        "displayName": "Engrave",
+        "canonical": "#2e2108",
+        "tonalRamp": [
+          "#120900",
+          "#2d220d",
+          "#4b3e26",
+          "#6a5b42",
+          "#8a7b61",
+          "#ab9c83",
+          "#cfc2ac",
+          "#f7eddd"
+        ]
+      },
+      "frame": {
+        "role": "neutral",
+        "displayName": "Frame Black",
+        "canonical": "#141010",
+        "tonalRamp": [
+          "#0d0a0a",
+          "#272323",
+          "#433e3e",
+          "#615c5c",
+          "#817c7c",
+          "#a29d9d",
+          "#c7c3c3",
+          "#f1eded"
+        ]
+      },
+      "plaster": {
+        "role": "neutral",
+        "displayName": "Plaster",
+        "canonical": "#f2efe9",
+        "tonalRamp": [
+          "#0c0b08",
+          "#262420",
+          "#423f3b",
+          "#605d58",
+          "#807d78",
+          "#a19e99",
+          "#c6c4bf",
+          "#f0eeeb"
+        ]
+      },
+      "chalk": {
+        "role": "neutral",
+        "displayName": "Chalk (derived)",
+        "canonical": "color-mix(in oklab, #f2efe9 82%, var(--c-wall))",
+        "tonalRamp": [
+          "#100a06",
+          "#2b221d",
+          "#483d37",
+          "#675b54",
+          "#877a73",
+          "#a89c95",
+          "#ccc2bb",
+          "#f5ede8"
+        ]
+      },
+      "ink-body": {
+        "role": "neutral",
+        "displayName": "Ink Body",
+        "canonical": "#3d342f",
+        "tonalRamp": [
+          "#0f0a07",
+          "#2a221e",
+          "#473e39",
+          "#655b56",
+          "#857b75",
+          "#a69c97",
+          "#cbc2bd",
+          "#f4ede9"
+        ]
+      },
+      "ink-meta": {
+        "role": "neutral",
+        "displayName": "Ink Meta",
+        "canonical": "#5a4f48",
+        "tonalRamp": [
+          "#100a06",
+          "#2a221d",
+          "#483d37",
+          "#665b54",
+          "#867b73",
+          "#a79c95",
+          "#ccc2bc",
+          "#f4ede8"
+        ]
+      },
+      "ink-star": {
+        "role": "neutral",
+        "displayName": "Ink Star",
+        "canonical": "#8a6a1f",
+        "tonalRamp": [
+          "#180600",
+          "#371e00",
+          "#573a00",
+          "#775801",
+          "#987832",
+          "#b89a5b",
+          "#dbc18b",
+          "#ffecc6"
+        ]
+      },
+      "wood": {
+        "role": "secondary",
+        "displayName": "Molding Wood",
+        "canonical": "#2a1810",
+        "tonalRamp": [
+          "#140804",
+          "#2a1810",
+          "#46301f",
+          "#644a37",
+          "#846752",
+          "#a68a74",
+          "#cbb29f",
+          "#f3e3d6"
+        ]
+      },
+      "wood-highlight": {
+        "role": "secondary",
+        "displayName": "Wood Highlight",
+        "canonical": "#4a2f1f",
+        "tonalRamp": [
+          "#170904",
+          "#321c10",
+          "#4a2f1f",
+          "#6a4c3a",
+          "#8b6c58",
+          "#ad8f7a",
+          "#d2b6a1",
+          "#f8e5d7"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline painted on the wall; highlight switches to neon script."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Wall-label titles, menu items, framed sign titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base reading text."
+      },
+      "body-lead": {
+        "displayName": "Body Lead",
+        "purpose": "Section intros on the wall, 42-58ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Captions, authors, dates, address labels."
+      },
+      "neon": {
+        "displayName": "Neon Script",
+        "purpose": "Lit signage only; size set per placement."
+      },
+      "plaque": {
+        "displayName": "Plaque",
+        "purpose": "Engraved text on brass plaques."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hung-object",
+        "value": "0 22px 30px -14px rgb(0 0 0 / .6), 0 4px 8px -2px rgb(0 0 0 / .35)",
+        "purpose": "Every frame on the wall."
+      },
+      {
+        "name": "wall-label",
+        "value": "0 14px 22px -12px rgb(0 0 0 / .55)",
+        "purpose": "Plaster labels beside portraits."
+      },
+      {
+        "name": "sign-plate",
+        "value": "0 16px 26px -14px rgb(0 0 0 / .7)",
+        "purpose": "Acrylic plate behind a neon sign."
+      },
+      {
+        "name": "plaque",
+        "value": "inset 0 0 0 3px color-mix(in oklab, #c9a24d 70%, white), 0 10px 18px -8px rgb(0 0 0 / .6)",
+        "purpose": "Brass plaques."
+      },
+      {
+        "name": "gilt-rules",
+        "value": "inset 0 0 0 2px #7a5c16, inset 0 0 0 5px #d4b45c, inset 0 0 0 6px #7a5c16, 0 0 0 1px #7a5c16, 0 0 0 5px #d4b45c, 0 0 0 6px #7a5c16",
+        "purpose": "Flat stepped rules of the gold frame, combined with hung-object."
+      },
+      {
+        "name": "neon-glow",
+        "value": "0 0 2px color-mix(in oklab, var(--c-neon) 30%, white), 0 0 10px var(--c-neon), 0 0 24px var(--c-neon), 0 0 48px color-mix(in oklab, var(--c-neon) 70%, transparent)",
+        "purpose": "text-shadow: the light of the neon tube."
+      },
+      {
+        "name": "molding",
+        "value": "inset 0 3px 0 #4a2f1f, 0 10px 18px -6px rgb(0 0 0 / .65)",
+        "purpose": "Wood rail where brick meets flat paint; casts onto the section below."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-hang",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Frames straighten (rotate to 0) and lift 4px over 0.6s on hover or focus."
+      },
+      {
+        "name": "ignite",
+        "value": "1.6s steps(1, end) .4s; opacity 0%:.15 8%:1 12%:.2 20%:1 24%:.35 34%:1",
+        "purpose": "Neon sign flickers on once at load, only when JS is present."
+      },
+      {
+        "name": "plaque-hover",
+        "value": "0.2s",
+        "purpose": "Plaque background change and 1px lift."
+      },
+      {
+        "name": "tilt-k-mobile",
+        "value": "1.6",
+        "purpose": "Tilt multiplier below 1024px."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "none",
+        "purpose": "Sign shown lit, frames still."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ],
+    "variableTokens": {
+      "tokens": [
+        "wall",
+        "neon"
+      ],
+      "derived": [
+        "wall-deep",
+        "chalk"
+      ],
+      "note": "wall and neon are resolved at build time per business from data/<slug>/brand.json, else the business.json palette (neon falls back to palette.accent), and set as --c-wall/--c-neon on <html>. Defaults #5c2a20 / #ff4fa3. Optional wall_texture \"brick\" derives a drawn brick tile from the same wall value at build time.",
+      "source": "site/src/layouts/MuroBase.astro"
+    },
+    "outsideSystem": [
+      "site/src/templates/Clasica.astro (earlier pre-Impeccable template)",
+      "site/src/templates/CuartoOscuro.astro (unfinished experiment)"
+    ],
+    "wallTexture": {
+      "flag": "data/<slug>/brand.json \"wall_texture\": \"brick\" (read as palette.wall_texture)",
+      "values": [
+        "flat (default, flag absent)",
+        "brick"
+      ],
+      "placement": "Brick wraps the hero band and replaces wall-deep on the closing section; a molding sits after the hero and before the closing. Middle sections and footer stay flat paint.",
+      "generator": "site/src/lib/brick.ts brickTile(wall, seedFrom(slug)) -> SVG data URL",
+      "tile": {
+        "brick": "92x28px",
+        "mortar": "5px",
+        "perCourse": 4,
+        "courses": 8,
+        "size": "388x264px",
+        "bond": "running (half-brick offset on alternate courses), seamless"
+      },
+      "derivation": {
+        "mortar": "hsl(h, s*0.35, max(0.08, l*0.55))",
+        "brick": "hsl(h +/-4deg, s*(0.85-1.15), l*(0.8-1.08))",
+        "topEdge": "2px at brick l + 0.045, s*0.9",
+        "bottomEdge": "3px at brick l - 0.05",
+        "chip": "~12% of bricks, 9x6px top corner in mortar"
+      },
+      "fallback": "background-color: var(--color-wall)",
+      "determinism": "Seeded from the business slug (seedFrom): stable per business, different brick layout and colour between businesses."
+    }
+  },
+  "components": [
+    {
+      "name": "Brass Plaque",
+      "kind": "button",
+      "refersTo": "plaque",
+      "description": "Primary action (Reservar), engraved dark text on brass.",
+      "html": "<a class=\"ds-plaque\" href=\"#\">Reservar visita</a>",
+      "css": ".ds-plaque{display:inline-flex;align-items:center;justify-content:center;min-height:3.25rem;padding:0 1.6rem;background:#c9a24d;color:#2e2108;font-family:Gloock,Georgia,serif;font-size:1.15rem;letter-spacing:.01em;text-decoration:none;border:1px solid #7a5c16;box-shadow:inset 0 0 0 3px color-mix(in oklab,#c9a24d 70%,white),0 10px 18px -8px rgb(0 0 0 / .6);transition:background-color .2s,translate .2s}.ds-plaque:hover{background:color-mix(in oklab,#c9a24d 85%,white);translate:0 -1px}.ds-plaque:focus-visible{outline:2px solid #c9a24d;outline-offset:4px}"
+    },
+    {
+      "name": "Outline Plaque",
+      "kind": "button",
+      "refersTo": "plaque-line",
+      "description": "Secondary action (Cómo llegar) on the wall.",
+      "html": "<div class=\"ds-wall\"><a class=\"ds-plaque-line\" href=\"#\">Cómo llegar</a></div>",
+      "css": ":host{--c-wall:#5c2a20;--c-neon:#ff4fa3;}.ds-wall{background:var(--c-wall);padding:24px}.ds-plaque-line{display:inline-flex;align-items:center;justify-content:center;min-height:3.25rem;padding:0 1.5rem;border:1px solid color-mix(in oklab,#f2efe9 55%,transparent);color:#f2efe9;font-family:'Figtree Variable',system-ui,sans-serif;font-weight:600;text-decoration:none;transition:background-color .2s,color .2s}.ds-plaque-line:hover{background:#f2efe9;color:#141010}.ds-plaque-line:focus-visible{outline:2px solid #c9a24d;outline-offset:4px}"
+    },
+    {
+      "name": "Gilt Frame with Mat",
+      "kind": "custom",
+      "refersTo": "frame-gilt",
+      "description": "A photograph hung in a flat-ruled gold frame with plaster mat; tilted at rest, straightens on hover or focus.",
+      "html": "<div class=\"ds-wall\"><figure class=\"ds-frame ds-gilt ds-mat\" style=\"--tilt:-1.4deg\" tabindex=\"0\"><div style=\"aspect-ratio:4/5;width:160px;background:#7a6a5c\"></div></figure></div>",
+      "css": ":host{--c-wall:#5c2a20;--c-neon:#ff4fa3;}.ds-wall{background:var(--c-wall);padding:40px}.ds-frame{margin:0;display:inline-block;background:#141010;rotate:var(--tilt,0deg);box-shadow:0 22px 30px -14px rgb(0 0 0 / .6), 0 4px 8px -2px rgb(0 0 0 / .35);transition:rotate .6s cubic-bezier(.16, 1, .3, 1),translate .6s cubic-bezier(.16, 1, .3, 1)}.ds-gilt{border:12px solid #b8912f;box-shadow:inset 0 0 0 2px #7a5c16,inset 0 0 0 5px #d4b45c,inset 0 0 0 6px #7a5c16,0 0 0 1px #7a5c16,0 0 0 5px #d4b45c,0 0 0 6px #7a5c16,0 22px 30px -14px rgb(0 0 0 / .6), 0 4px 8px -2px rgb(0 0 0 / .35)}.ds-mat{background:#f2efe9;padding:clamp(14px,1.9vw,26px)}.ds-frame:hover,.ds-frame:focus-visible{rotate:0deg;translate:0 -4px}.ds-frame:focus-visible{outline:2px solid #c9a24d;outline-offset:4px}@media (prefers-reduced-motion:reduce){.ds-frame{transition:none}}"
+    },
+    {
+      "name": "Black Frame",
+      "kind": "custom",
+      "refersTo": "frame-black",
+      "description": "A photograph in a 9px matte black frame.",
+      "html": "<div class=\"ds-wall\"><figure class=\"ds-frame\" style=\"--tilt:1.6deg\" tabindex=\"0\"><div style=\"aspect-ratio:4/5;width:160px;background:#7a6a5c\"></div></figure></div>",
+      "css": ":host{--c-wall:#5c2a20;--c-neon:#ff4fa3;}.ds-wall{background:var(--c-wall);padding:40px}.ds-frame{margin:0;display:inline-block;border:9px solid #141010;background:#141010;rotate:var(--tilt,0deg);box-shadow:0 22px 30px -14px rgb(0 0 0 / .6), 0 4px 8px -2px rgb(0 0 0 / .35);transition:rotate .6s cubic-bezier(.16, 1, .3, 1),translate .6s cubic-bezier(.16, 1, .3, 1)}.ds-frame:hover,.ds-frame:focus-visible{rotate:0deg;translate:0 -4px}.ds-frame:focus-visible{outline:2px solid #c9a24d;outline-offset:4px}@media (prefers-reduced-motion:reduce){.ds-frame{transition:none}}"
+    },
+    {
+      "name": "Wall Label",
+      "kind": "card",
+      "refersTo": "label-card",
+      "description": "Museum label beside a portrait: title, body, literal review quote.",
+      "html": "<div class=\"ds-wall\"><div class=\"ds-label\"><h3>Los gatos mandan en casa</h3><p>Hay entre 15 y 18 gatos y se nota en la limpieza.</p><blockquote><p>“El establecimiento resalta por su limpieza.”</p><footer>Mar Mora, en Google</footer></blockquote></div></div>",
+      "css": ":host{--c-wall:#5c2a20;--c-neon:#ff4fa3;}.ds-wall{background:var(--c-wall);padding:32px}.ds-label{max-width:36rem;background:#f2efe9;color:#141010;padding:36px;box-shadow:0 14px 22px -12px rgb(0 0 0 / .55);font-family:'Figtree Variable',system-ui,sans-serif}.ds-label h3{margin:0;font-family:Gloock,Georgia,serif;font-weight:400;font-size:1.875rem;line-height:1.2}.ds-label>p{margin:.75rem 0 0;color:#3d342f;line-height:1.6}.ds-label blockquote{margin:1.5rem 0 0;padding-top:1.25rem;border-top:1px solid rgb(20 16 16 / .15)}.ds-label blockquote p{margin:0;font-family:Gloock,Georgia,serif;font-size:1.125rem}.ds-label footer{margin-top:.5rem;font-size:.875rem;color:#5a4f48}"
+    },
+    {
+      "name": "Neon Sign",
+      "kind": "custom",
+      "refersTo": "neon",
+      "description": "Lit signage in Yellowtail on a screwed acrylic plate; ignites once.",
+      "html": "<div class=\"ds-wall\"><div class=\"ds-plate\"><i style=\"top:8px;left:8px\"></i><i style=\"top:8px;right:8px\"></i><i style=\"bottom:8px;left:8px\"></i><i style=\"bottom:8px;right:8px\"></i><h2 class=\"ds-neon\">La Casa de los Gatos</h2></div></div>",
+      "css": ":host{--c-wall:#5c2a20;--c-neon:#ff4fa3;}.ds-wall{background:var(--c-wall);padding:32px}.ds-plate{position:relative;display:inline-block;padding:24px 36px;background:color-mix(in oklab,#141010 55%,transparent);border:1px solid color-mix(in oklab,#f2efe9 14%,transparent);box-shadow:0 16px 26px -14px rgb(0 0 0 / .7)}.ds-plate i{position:absolute;width:8px;height:8px;border-radius:9999px;background:rgb(215 201 193 / .5)}.ds-neon{margin:0;font-family:Yellowtail,Gloock,cursive;font-weight:400;font-size:3rem;line-height:1.15;color:color-mix(in oklab,var(--c-neon) 25%,white);text-shadow:0 0 2px color-mix(in oklab,var(--c-neon) 30%,white),0 0 10px var(--c-neon),0 0 24px var(--c-neon),0 0 48px color-mix(in oklab,var(--c-neon) 70%,transparent);animation:ds-ignite 1.6s steps(1,end) .4s both}@keyframes ds-ignite{0%{opacity:.15}8%{opacity:1}12%{opacity:.2}20%{opacity:1}24%{opacity:.35}34%{opacity:1}100%{opacity:1}}@media (prefers-reduced-motion:reduce){.ds-neon{animation:none}}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "plaque",
+      "description": "Sticky wall bar with name, chalk links and a compact brass plaque.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-name\" href=\"#\">La Gatoria Cat Cafe</a><ul><li><a href=\"#\">La carta</a></li><li><a href=\"#\">Reseñas</a></li><li><a href=\"#\">Cómo llegar</a></li></ul><a class=\"ds-cta\" href=\"#\">Reservar</a></nav>",
+      "css": ":host{--c-wall:#5c2a20;--c-neon:#ff4fa3;}.ds-nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:64px;padding:0 32px;background:color-mix(in oklab,var(--c-wall) 92%,transparent);backdrop-filter:blur(4px);font-family:'Figtree Variable',system-ui,sans-serif}.ds-name{font-family:Gloock,Georgia,serif;font-size:1.5rem;color:#f2efe9;text-decoration:none}.ds-nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}.ds-nav ul a{color:color-mix(in oklab,#f2efe9 82%,var(--c-wall));text-decoration:none;font-size:.95rem}.ds-nav ul a:hover{color:#f2efe9;text-decoration:underline;text-underline-offset:.22em}.ds-cta{display:inline-flex;align-items:center;min-height:2.5rem;padding:0 1rem;background:#c9a24d;color:#2e2108;border:1px solid #7a5c16;font-family:Gloock,Georgia,serif;text-decoration:none;box-shadow:inset 0 0 0 3px color-mix(in oklab,#c9a24d 70%,white)}.ds-cta:hover{background:color-mix(in oklab,#c9a24d 85%,white)}.ds-nav a:focus-visible{outline:2px solid #c9a24d;outline-offset:4px}"
+    },
+    {
+      "name": "Menu Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Small brass tag beside a menu item.",
+      "html": "<span class=\"ds-tag\">Vegetariano</span>",
+      "css": ".ds-tag{display:inline-block;background:#c9a24d;color:#2e2108;padding:2px 8px;font-family:'Figtree Variable',system-ui,sans-serif;font-size:.75rem;font-weight:600;letter-spacing:.025em;text-transform:uppercase}"
+    },
+    {
+      "name": "Brick Wall with Molding",
+      "kind": "custom",
+      "refersTo": "brick-wall",
+      "description": "Opt-in drawn running-bond brick for the opening and close, divided from the flat paint by a wood-and-gilt molding. Sample tile is a 2-course excerpt; the real tile is generated from the wall colour.",
+      "html": "<div class=\"ds-brick\"><a class=\"ds-plaque\" href=\"#\">Reservar visita</a></div><div class=\"ds-molding\"></div><div class=\"ds-paint\"></div>",
+      "css": ":host{--c-wall:#5c2a20;}.ds-brick{height:140px;padding:40px 32px;background-color:var(--c-wall);background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='194' height='66'%3E%3Crect width='194' height='66' fill='hsl(10 16%25 14%25)'/%3E%3Crect x='2.5' y='2.5' width='92' height='28' fill='hsl(9 48%25 25%25)'/%3E%3Crect x='2.5' y='2.5' width='92' height='2' fill='hsl(10 42%25 29%25)'/%3E%3Crect x='2.5' y='27.5' width='92' height='3' fill='hsl(10 48%25 20%25)'/%3E%3Crect x='99.5' y='2.5' width='92' height='28' fill='hsl(12 46%25 22%25)'/%3E%3Crect x='99.5' y='2.5' width='92' height='2' fill='hsl(10 42%25 26%25)'/%3E%3Crect x='99.5' y='27.5' width='92' height='3' fill='hsl(10 48%25 17%25)'/%3E%3Crect x='-46' y='35.5' width='92' height='28' fill='hsl(8 50%25 23%25)'/%3E%3Crect x='51' y='35.5' width='92' height='28' fill='hsl(11 47%25 26%25)'/%3E%3Crect x='51' y='35.5' width='92' height='2' fill='hsl(10 42%25 30%25)'/%3E%3Crect x='51' y='60.5' width='92' height='3' fill='hsl(10 48%25 21%25)'/%3E%3Crect x='148' y='35.5' width='92' height='28' fill='hsl(8 50%25 23%25)'/%3E%3Crect x='-46' y='35.5' width='92' height='2' fill='hsl(10 42%25 27%25)'/%3E%3Crect x='148' y='35.5' width='92' height='2' fill='hsl(10 42%25 27%25)'/%3E%3Crect x='-46' y='60.5' width='92' height='3' fill='hsl(10 48%25 18%25)'/%3E%3Crect x='148' y='60.5' width='92' height='3' fill='hsl(10 48%25 18%25)'/%3E%3Crect x='51' y='35.5' width='9' height='6' fill='hsl(10 16%25 14%25)'/%3E%3C/svg%3E\");background-repeat:repeat}.ds-molding{position:relative;z-index:1;height:16px;background:#2a1810;border-top:3px solid #b8912f;border-bottom:2px solid #7a5c16;box-shadow:inset 0 3px 0 #4a2f1f,0 10px 18px -6px rgb(0 0 0 / .65)}.ds-paint{height:80px;background:var(--c-wall)}.ds-plaque{display:inline-flex;align-items:center;min-height:3.25rem;padding:0 1.6rem;background:#c9a24d;color:#2e2108;font-family:Gloock,Georgia,serif;font-size:1.15rem;text-decoration:none;border:1px solid #7a5c16;box-shadow:inset 0 0 0 3px color-mix(in oklab,#c9a24d 70%,white),0 10px 18px -8px rgb(0 0 0 / .6)}.ds-plaque:hover{background:color-mix(in oklab,#c9a24d 85%,white)}.ds-plaque:focus-visible{outline:2px solid #c9a24d;outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "El muro de la casa",
+    "overview": "The page is the business's own salon wall. Every section is flat paint in the business's wall colour; on it hang the business's photographs in mismatched frames (gilt, matte black, plaster mats), museum wall labels beside them, brass plaques for labels and actions, and the business's name or key phrase lit as a neon sign. Nothing is a card on a canvas: everything is an object hung on a wall, so everything casts a soft shadow onto the paint and sits a little askew until the visitor reaches for it.\n\nThe world is per-business. Two tokens, **wall** and **neon**, are variable: they are resolved at build time from `data/<slug>/brand.json` (observed brand colours, which win) or from the automatic palette in `business.json`, and injected as `--c-wall` / `--c-neon` on `<html>`. The hex values in the frontmatter are the defaults and La Gatoria's values (`#5c2a20` brick, `#ff4fa3` pink). Every other material (gilt, brass, plaster, frame black, engrave) is fixed, because real frames and plaques look the same on any wall. **wall-deep** and **chalk** are derived from the wall by mixing, so they shift with it.\n\nThe wall has one optional second material. When `brand.json` sets `\"wall_texture\": \"brick\"`, the opening (hero) and the close sit on a drawn running-bond brick wall generated from the same wall colour, and a dark wood molding with a gilt fillet marks each place where brick meets the flat paint that carries the middle sections. Brick is drawn, not photographed: a vector tile of flat-toned bricks with flat edge strips, so it stays as flat as the paint. Without the flag the whole page is flat paint, exactly as before.\n\nDensity is gallery-like rather than grid-like: a 12-column container at 1360px with asymmetric spans, generous vertical rhythm, and photographs carrying the proof. This is the pipeline's default template. Two other templates render the same `business.json` but sit outside this system: «clasica» (the earlier pre-Impeccable template) and «cuarto-oscuro» (an unfinished experiment). Nothing here describes them.",
+    "keyCharacteristics": [
+      "Flat painted wall owns every section; depth comes from hung objects and their shadows, never gradients.",
+      "Optional drawn brick (flag-driven) for the opening and the close, derived from the wall colour, divided from the paint by a wood-and-gilt molding.",
+      "Three frame materials (gilt with flat gold rules, matte black, plaster mat) mixed on purpose, never uniform.",
+      "Brass plaques with engraved dark text for primary actions, rating, and hours.",
+      "One neon colour, used only as lit signage in Yellowtail script.",
+      "Slight tilt at rest, straighten and lift on hover or focus; the neon ignites once on load.",
+      "Square corners everywhere; the only round shapes are screw heads."
+    ],
+    "rules": [
+      {
+        "name": "The Wall Owns Everything Rule",
+        "body": "Every section background is the wall, in one of two materials: flat paint (wall or wall-deep) everywhere, or, when the business opts in, drawn brick for the opening and the close with flat paint between. Light surfaces exist only as objects hung on it (mats, labels, framed notes), never as full-bleed bands.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Light Rule",
+        "body": "Neon appears only as lit signage text (headline highlight, handle sign, story sign, closing line) and as selection. Never on buttons, borders, icons, or fills.",
+        "section": "colors"
+      },
+      {
+        "name": "The Variable Paint Rule",
+        "body": "Never hard-code a wall or neon value in a component; read `--c-wall` / `--c-neon` (or the derived tokens) so each business's colours land everywhere. The brick tile is the one build-time derivation: it is generated from the same resolved wall value, so it shifts with the business too.",
+        "section": "colors"
+      },
+      {
+        "name": "The Script Is Light Rule",
+        "body": "Yellowtail is used only with the neon treatment. Never set reading text, labels, or buttons in it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Display Is One Weight Rule",
+        "body": "Gloock runs at 400 everywhere; hierarchy comes from size, not weight.",
+        "section": "typography"
+      },
+      {
+        "name": "The Nothing Floats Rule",
+        "body": "Every object on the wall carries a soft drop shadow; a light surface without one reads as a card, which this world does not have.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Flat Gold Rule",
+        "body": "Gilt frames are built from flat stepped rules (inset and outset rings in gilt-dark and gilt-light), never gradients or bevel images.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Drawn Brick Rule",
+        "body": "Brick is a flat plane like the paint: per-brick flat tones with flat edge strips, drawn in vector from the wall colour. No gradients, no photographic or raster texture, no shadow cast by the brick itself.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** read wall and neon from `--c-wall` / `--c-neon` and derive deeper or lighter steps with `color-mix(in oklab, ...)`.",
+      "**Do** hang every photograph in a frame, mixing gilt, black and matted frames, with a small rest tilt and the hung-object shadow.",
+      "**Do** use the brass plaque for the primary action and the plaster outline plaque for the secondary one.",
+      "**Do** keep the motion grammar to one ignition and one straighten; under reduced motion show the sign lit and frames still.",
+      "**Do** quote reviews literally inside framed notes, with author and date beneath a 1px rule.",
+      "**Do** enable brick only through the `wall_texture` flag, keep it to the opening and the close, and put a molding at every brick-to-paint edge."
+    ],
+    "donts": [
+      "**Don't** use neon for anything but lit signage and selection.",
+      "**Don't** set reading text, labels or buttons in Yellowtail.",
+      "**Don't** round corners on frames, plaques, labels or tags.",
+      "**Don't** build gilt from gradients or put gradients on the wall.",
+      "**Don't** place a light surface on the wall without a drop shadow, or tile photos in rows of equal unframed cards.",
+      "**Don't** hard-code a business's wall or neon hex in a component.",
+      "**Don't** use a photographed or raster brick texture, or shade brick with gradients; generate it from the wall colour.",
+      "**Don't** run brick behind the middle sections or butt brick against paint without a molding."
+    ]
+  }
+}

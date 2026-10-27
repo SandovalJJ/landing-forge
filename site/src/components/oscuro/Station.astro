@@ -1,0 +1,10 @@
+---
+// Encabezado de sección: el título manda; la estación del proceso va a su derecha, en la misma línea base.
+interface Props { n: string; name: string; title: string; id?: string }
+const { n, name, title, id } = Astro.props;
+---
+
+<div class="flex flex-wrap items-end justify-between gap-x-8 gap-y-3 border-b-[1.5px] border-ink pb-5">
+  <h2 id={id} class="max-w-[22ch] font-pencil text-[clamp(2rem,4.4vw,3.6rem)] leading-[1.08] uppercase">{title}</h2>
+  <p class="label shrink-0 pb-2 text-deeproom"><span class="lcd mr-2 text-sm tracking-normal">{n}</span>{name}</p>
+</div>

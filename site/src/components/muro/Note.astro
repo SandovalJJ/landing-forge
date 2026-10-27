@@ -1,0 +1,26 @@
+---
+// Una reseña colgada como nota enmarcada.
+import Star from "./Star.astro";
+import { excerpt, reviewWhen, type Review } from "../../lib/site";
+interface Props { review: Review; kind: "black" | "gilt-mat" | "black-mat"; tilt: number; class?: string }
+const { review: r, kind, tilt, class: cls = "" } = Astro.props;
+const { short, cut } = excerpt(r.text, 260);
+const frame = { black: "frame-black bg-plaster p-5", "gilt-mat": "frame-gilt frame-mat", "black-mat": "frame-black frame-mat" }[kind];
+---
+
+<figure class:list={["hang", cls]}>
+  <div class:list={["frame text-frame", frame]} style={`--tilt:${tilt}deg`}>
+    <span class="text-[#8a6a1f]"><Star value={r.rating} class="size-3.5" /></span>
+    {cut ? (
+      <details class="group mt-3">
+        <summary class="cursor-pointer list-none leading-relaxed marker:hidden [&::-webkit-details-marker]:hidden">
+          <span class="group-open:hidden">“{short}…” <span class="font-semibold underline">seguir leyendo</span></span>
+        </summary>
+        <p class="leading-relaxed">“{r.text}”</p>
+      </details>
+    ) : <p class="mt-3 leading-relaxed">“{r.text}”</p>}
+    <figcaption class="mt-4 flex justify-between gap-4 border-t border-frame/15 pt-3 text-sm text-[#5a4f48]">
+      <span class="font-semibold">{r.author}</span><span>{reviewWhen(r.when)}</span>
+    </figcaption>
+  </div>
+</figure>

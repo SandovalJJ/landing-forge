@@ -1,0 +1,65 @@
+---
+import { business, copy, directionsUrl, mapsEmbed, phoneHref } from "../lib/site";
+const hours = business.hours ?? [];
+---
+
+<section id="visita" class="scroll-mt-20 border-t border-line bg-surface/50">
+  <div class="mx-auto grid max-w-7xl gap-10 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:px-8">
+    <div class="lg:col-span-5" data-reveal>
+      <p class="section-label">05 — Visítanos</p>
+      <h2 class="mt-4 text-4xl leading-tight font-bold tracking-tight">{copy.visit_title}</h2>
+      <p class="mt-4 text-lg leading-relaxed text-muted">{copy.visit_note}</p>
+
+      <div class="mt-8 space-y-4 text-sm">
+        <div class="spotlight p-5">
+          <p class="relative text-xs font-medium tracking-wide text-muted uppercase">Dirección</p>
+          <p class="relative mt-1 font-medium">{business.address}</p>
+          <a href={directionsUrl()} target="_blank" rel="noopener" class="relative mt-3 inline-flex font-semibold text-accent hover:underline">Abrir en Google Maps →</a>
+        </div>
+        {business.phone && (
+          <a href={`tel:${phoneHref()}`} class="spotlight flex items-center justify-between p-5">
+            <span class="relative">
+              <span class="block text-xs font-medium tracking-wide text-muted uppercase">Teléfono</span>
+              <span class="mt-1 block font-medium">{business.phone}</span>
+            </span>
+            <span class="relative text-accent">Llamar →</span>
+          </a>
+        )}
+      </div>
+
+      {hours.length > 0 && (
+        <table class="mt-8 w-full text-sm" data-hours>
+          <caption class="mb-3 text-left text-xs font-medium tracking-wide text-muted uppercase">Horario</caption>
+          <tbody class="divide-y divide-line">
+            {hours.map((h, i) => (
+              <tr data-day={i} class="transition-colors data-[today]:font-semibold data-[today]:text-accent">
+                <th scope="row" class="py-2.5 text-left font-normal">{h.day}</th>
+                <td class="py-2.5 text-right tabular-nums">{h.hours}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+    </div>
+
+    <div class="min-h-96 overflow-hidden rounded-3xl border border-line lg:col-span-7" data-reveal>
+      <iframe
+        title={`Mapa de ${business.name}`}
+        src={mapsEmbed()}
+        class="size-full min-h-96 grayscale-[0.3]"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Google entrega los horarios de lunes (0) a domingo (6); JS usa domingo = 0.
+  const idx = (new Date().getDay() + 6) % 7;
+  const row = document.querySelector<HTMLTableRowElement>(`[data-hours] tr[data-day="${idx}"]`);
+  if (row) {
+    row.dataset.today = "";
+    const today = row.querySelector("td")?.textContent?.trim();
+    document.querySelectorAll("[data-today-hours]").forEach((el) => (el.textContent = today ?? "—"));
+  }
+</script>

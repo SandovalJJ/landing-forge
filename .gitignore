@@ -1,0 +1,7 @@
+.env
+node_modules/
+dist/
+site/dist/
+site/.astro/
+__pycache__/
+.venv/

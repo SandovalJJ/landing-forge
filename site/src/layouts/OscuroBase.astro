@@ -1,0 +1,78 @@
+---
+import "../styles/oscuro.css";
+import { business, copy, photo } from "../lib/site";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: business.name,
+  address: business.address,
+  telephone: business.phone_intl ?? business.phone,
+  url: business.website,
+  image: photo(0).src,
+  geo: business.location && { "@type": "GeoCoordinates", latitude: business.location.lat, longitude: business.location.lng },
+  aggregateRating: business.rating && { "@type": "AggregateRating", ratingValue: business.rating, reviewCount: business.review_count },
+};
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{copy.seo_title}</title>
+    <meta name="description" content={copy.seo_description} />
+    <meta name="theme-color" content="#f2a60c" />
+    <meta property="og:title" content={copy.seo_title} />
+    <meta property="og:description" content={copy.seo_description} />
+    <meta property="og:image" content={photo(0).src} />
+    <link rel="preload" as="image" href={photo(0).src} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body class="min-h-dvh overflow-x-clip">
+    <slot />
+    <script>
+      // Revelado: cada copia pasa de papel en blanco a color al entrar en pantalla,
+      // y el cronómetro de su bandeja cuenta mientras tanto.
+      const DEV_MS = 2400;
+      const counters = new Map<Element, HTMLElement>();
+      document.querySelectorAll<HTMLElement>("[data-dev-timer]").forEach((t) => {
+        const target = document.getElementById(t.dataset.devTimer!);
+        if (target) counters.set(target, t);
+      });
+      const pad = (n: number) => String(n).padStart(2, "0");
+      const run = (el: Element) => {
+        el.classList.add("developed");
+        const t = counters.get(el);
+        if (!t) return;
+        const start = performance.now();
+        const total = Number(t.dataset.devSeconds ?? 75);
+        const tick = (now: number) => {
+          const p = Math.min(1, (now - start) / DEV_MS);
+          const s = Math.round(total * (1 - Math.pow(1 - p, 3)));
+          t.textContent = `${pad(Math.floor(s / 60))}:${pad(s % 60)}`;
+          if (p < 1) requestAnimationFrame(tick);
+          else t.closest("[data-dev-state]")?.setAttribute("data-dev-state", "fixed");
+        };
+        requestAnimationFrame(tick);
+      };
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.querySelectorAll("[data-print]").forEach((el) => el.classList.add("developed"));
+        document.querySelectorAll("[data-dev-state]").forEach((el) => el.setAttribute("data-dev-state", "fixed"));
+      } else {
+        const io = new IntersectionObserver(
+          (entries) => entries.forEach((e) => e.isIntersecting && (run(e.target), io.unobserve(e.target))),
+          { threshold: 0.35 },
+        );
+        document.querySelectorAll("[data-print]").forEach((el) => io.observe(el));
+      }
+
+      // Horario de hoy (Google lo entrega de lunes a domingo).
+      const idx = (new Date().getDay() + 6) % 7;
+      document.querySelectorAll<HTMLElement>(`[data-day="${idx}"]`).forEach((el) => (el.dataset.today = ""));
+      document.querySelectorAll<HTMLElement>("[data-today-only]").forEach((el) => {
+        el.hidden = el.dataset.todayOnly !== String(idx);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+---
+import { copy, photo } from "../lib/site";
+const vp = copy.value_proposition;
+const img = photo(2);
+---
+
+<section id="propuesta" class="scroll-mt-20 border-t border-line bg-surface/50">
+  <div class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+    <div class="grid gap-10 lg:grid-cols-12" data-reveal>
+      <div class="lg:col-span-5">
+        <p class="section-label">01 — Por qué venir</p>
+        <h2 class="mt-4 text-4xl leading-tight font-bold tracking-tight sm:text-5xl">{vp.title}</h2>
+      </div>
+      <p class="self-end text-lg leading-relaxed text-muted lg:col-span-6 lg:col-start-7">{vp.body}</p>
+    </div>
+
+    <!-- Bento: foto alta + 3 pilares con evidencia real de reseñas -->
+    <div class="mt-14 grid gap-4 md:grid-cols-6 md:grid-rows-2">
+      <figure class="relative min-h-72 overflow-hidden rounded-2xl border border-line md:col-span-2 md:row-span-2" data-reveal>
+        <img src={img.src} alt="" loading="lazy" class="absolute inset-0 size-full object-cover transition duration-700 hover:scale-105" />
+      </figure>
+      {vp.pillars.map((p, i) => (
+        <article
+          class:list={["spotlight group flex flex-col justify-between p-7", i === 0 ? "md:col-span-4" : "md:col-span-2"]}
+          data-reveal
+          style={`transition-delay:${i * 80}ms`}
+        >
+          <div class="relative">
+            <span class="font-mono text-xs text-muted">0{i + 1}</span>
+            <h3 class="mt-3 text-xl font-bold tracking-tight">{p.title}</h3>
+            <p class="mt-2 leading-relaxed text-muted">{p.body}</p>
+          </div>
+          <blockquote class="relative mt-6 border-l-2 border-accent pl-4 text-sm">
+            <p class="italic">“{p.evidence_quote}”</p>
+            <footer class="mt-1.5 text-xs text-muted">— {p.evidence_author}, en Google</footer>
+          </blockquote>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

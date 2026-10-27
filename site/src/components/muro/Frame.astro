@@ -1,0 +1,23 @@
+---
+// Un cuadro colgado en el muro: la foto del negocio dentro de uno de tres marcos.
+import type { Photo } from "../../lib/site";
+type Kind = "gilt" | "black" | "black-mat" | "gilt-mat";
+interface Props { photo: Photo; kind?: Kind; tilt?: number; ratio?: string; class?: string; eager?: boolean; fill?: boolean }
+const { photo, kind = "black", tilt = 0, ratio, class: cls = "", eager = false, fill = false } = Astro.props;
+const classes = {
+  gilt: "frame-gilt",
+  black: "frame-black",
+  "black-mat": "frame-black frame-mat",
+  "gilt-mat": "frame-gilt frame-mat",
+}[kind];
+---
+
+<figure class:list={["frame", classes, fill && "h-full", cls]} style={`--tilt:${tilt}deg`}>
+  <img
+    src={photo.src}
+    alt={photo.alt ?? ""}
+    loading={eager ? "eager" : "lazy"}
+    fetchpriority={eager ? "high" : undefined}
+    style={ratio && !fill ? `aspect-ratio:${ratio}` : undefined}
+  />
+</figure>

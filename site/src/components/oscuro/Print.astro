@@ -1,0 +1,10 @@
+---
+// Una copia: la foto del negocio sobre papel, que se revela al entrar en pantalla.
+import type { Photo } from "../../lib/site";
+interface Props { photo: Photo; alt?: string; class?: string; ratio?: string; eager?: boolean; border?: boolean; id?: string }
+const { photo, alt = "", class: cls = "", ratio = "4 / 3", eager = false, border = true, id } = Astro.props;
+---
+
+<figure id={id} class:list={["print relative overflow-hidden bg-enamel", border && "border-[10px] border-enamel outline outline-1 outline-ink/40", cls]} style={`aspect-ratio:${ratio}`} data-print>
+  <img src={photo.src} alt={alt} class="size-full object-cover" loading={eager ? "eager" : "lazy"} fetchpriority={eager ? "high" : undefined} />
+</figure>

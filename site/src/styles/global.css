@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/plus-jakarta-sans";
+
+/* Los valores reales llegan desde business.json → <html style="--c-*"> (ver Base.astro). */
+@theme inline {
+  --color-bg: var(--c-bg);
+  --color-surface: var(--c-surface);
+  --color-ink: var(--c-ink);
+  --color-muted: var(--c-muted);
+  --color-line: var(--c-border);
+  --color-accent: var(--c-accent);
+  --color-accent-2: var(--c-accent-2);
+  --color-accent-fg: var(--c-accent-fg);
+  --color-accent-soft: var(--c-accent-soft);
+
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans Variable", "Inter Variable", ui-sans-serif, sans-serif;
+
+  --animate-marquee: marquee var(--marquee-duration, 60s) linear infinite;
+}
+
+@keyframes marquee {
+  to { transform: translateX(calc(-50% - 0.5rem)); }
+}
+
+@utility btn {
+  @apply inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition
+         focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+}
+
+@layer base {
+  html { background: var(--c-bg); color: var(--c-ink); scroll-behavior: smooth; }
+  body { @apply font-sans antialiased; font-feature-settings: "cv11", "ss01"; }
+  h1, h2, h3 { @apply font-display; text-wrap: balance; }
+  p { text-wrap: pretty; }
+  ::selection { background: var(--c-accent); color: var(--c-accent-fg); }
+}
+
+@layer components {
+  /* Tarjeta con borde sutil + foco de luz que sigue al cursor (estilo Aceternity "card spotlight"). */
+  .spotlight {
+    @apply relative overflow-hidden rounded-2xl border border-line bg-surface;
+    --x: 50%;
+    --y: 50%;
+  }
+  .spotlight::before {
+    content: "";
+    @apply pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: radial-gradient(420px circle at var(--x) var(--y), color-mix(in oklab, var(--c-accent) 14%, transparent), transparent 60%);
+  }
+  .spotlight::after {
+    content: "";
+    @apply pointer-events-none absolute inset-0 rounded-[inherit] opacity-0 transition-opacity duration-300;
+    padding: 1px;
+    background: radial-gradient(260px circle at var(--x) var(--y), var(--c-accent), transparent 70%);
+    mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  }
+  .spotlight:hover::before, .spotlight:hover::after { opacity: 1; }
+
+  .btn-primary {
+    @apply btn bg-accent text-accent-fg hover:brightness-110;
+    box-shadow: 0 1px 0 0 rgb(255 255 255 / 0.25) inset, 0 8px 24px -10px var(--c-accent);
+  }
+  .btn-ghost { @apply btn border border-line bg-surface text-ink hover:border-accent/50; }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-line bg-surface/70 px-3 py-1
+           text-xs font-medium tracking-wide text-muted backdrop-blur;
+  }
+
+  .section-label { @apply font-mono text-xs uppercase tracking-[0.18em] text-accent; }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, color-mix(in oklab, var(--c-border) 70%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklab, var(--c-border) 70%, transparent) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse at top left, #000 20%, transparent 70%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee { animation: none; }
+  html { scroll-behavior: auto; }
+}

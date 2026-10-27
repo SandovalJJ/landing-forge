@@ -1,0 +1,16 @@
+{
+  "source_image": "photo-1.svg",
+  "extracted": ["#f6e3d8", "#b9542c", "#c97a3a", "#7a4a2f"],
+  "dominant": "#f6e3d8",
+  "tokens": {
+    "bg": "#fbf8f5",
+    "surface": "#fffdfb",
+    "ink": "#231a16",
+    "muted": "#6b5e57",
+    "border": "#ece3dc",
+    "accent": "#b4502a",
+    "accent-2": "#cf7d3c",
+    "accent-fg": "#ffffff",
+    "accent-soft": "#f6e3d8"
+  }
+}

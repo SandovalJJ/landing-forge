@@ -1,0 +1,46 @@
+---
+import Stars from "./Stars.astro";
+import { business, copy, formatCount, formatRating, initials, reviews } from "../lib/site";
+
+// La banda necesita ≥6 tarjetas por mitad para llenar pantallas anchas,
+// y dos mitades idénticas para que el bucle no tenga saltos.
+const half = reviews.length ? Array.from({ length: Math.ceil(6 / reviews.length) }, () => reviews).flat() : [];
+const loop = [...half, ...half];
+---
+
+<section id="resenas" class="scroll-mt-20 overflow-hidden border-y border-line bg-surface/50 py-24">
+  <div class="mx-auto flex max-w-7xl flex-col gap-8 px-4 sm:px-6 md:flex-row md:items-end md:justify-between lg:px-8" data-reveal>
+    <div class="max-w-2xl">
+      <p class="section-label">03 — Lo que dicen</p>
+      <h2 class="mt-4 text-4xl leading-tight font-bold tracking-tight sm:text-5xl">{copy.reviews_title}</h2>
+      <p class="mt-5 text-lg leading-relaxed text-muted">{copy.reviews_intro}</p>
+    </div>
+    <div class="flex items-center gap-4 rounded-2xl border border-line bg-surface p-5">
+      <span class="font-display text-5xl font-extrabold tracking-tight">{formatRating(business.rating)}</span>
+      <div class="text-sm">
+        <Stars value={business.rating} class="size-4" />
+        <p class="mt-1 text-muted">{formatCount(business.review_count)} reseñas en Google</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="group relative mt-14 [mask-image:linear-gradient(to_right,transparent,#000_8%,#000_92%,transparent)]">
+    <ul class="flex w-max animate-marquee gap-4 group-hover:[animation-play-state:paused]" style={`--marquee-duration:${half.length * 9}s`}>
+      {loop.map((r, i) => (
+        <li class="spotlight w-[22rem] shrink-0 p-6" aria-hidden={i >= reviews.length ? "true" : undefined}>
+          <div class="relative flex h-full flex-col">
+            <Stars value={r.rating} />
+            <p class="mt-4 line-clamp-6 leading-relaxed">“{r.text}”</p>
+            <div class="mt-auto flex items-center gap-3 pt-6 text-sm">
+              <span class="grid size-9 place-items-center rounded-full bg-accent-soft text-xs font-bold text-accent">{initials(r.author)}</span>
+              <div>
+                <p class="font-semibold">{r.author}</p>
+                {r.when && <p class="text-xs text-muted">{r.when}</p>}
+              </div>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

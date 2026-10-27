@@ -1,0 +1,333 @@
+---
+import MuroBase from "../layouts/MuroBase.astro";
+import Frame from "../components/muro/Frame.astro";
+import Star from "../components/muro/Star.astro";
+import Note from "../components/muro/Note.astro";
+import { brickTile, BRICK_TILE, seedFrom } from "../lib/brick";
+import {
+  business, copy, photos, photo, reviews, hours, instagram, palette,
+  directionsUrl, mapsEmbed, phoneHref, reserveHref, reserveVia,
+  formatCount, formatRating, splitHighlight, excerpt, reviewWhen,
+} from "../lib/site";
+
+const { hero, value_proposition: vp } = copy;
+const [before, mark, after] = splitHighlight(hero.headline, hero.headline_highlight);
+const reserve = reserveHref();
+const external = (href: string) => /^https?:/.test(href);
+const ratio = (i: number) => {
+  const p = photo(i);
+  return p.width && p.height ? `${p.width} / ${p.height}` : "4 / 5";
+};
+// Ladrillo dibujado (SVG) a partir del color de la pared, solo si el negocio lo pidió en brand.json.
+const brick = palette.wall_texture === "brick";
+const brickStyle = brick
+  ? `background-image:${brickTile(palette.wall ?? "#5c2a20", seedFrom(business.slug ?? business.name))};background-size:${BRICK_TILE.w}px ${BRICK_TILE.h}px`
+  : undefined;
+const kinds = ["gilt-mat", "black", "black-mat", "gilt"] as const;
+const tilts = [-1.8, 1.4, -1, 2.2, -2.4, 1.1];
+// Reparto de fotos sin repetir:
+// - portada: hasta 5 en escritorio (el teléfono muestra solo las 3 primeras);
+// - fila de Instagram: al menos 3 fotos de Instagram que no estén en la portada;
+// - cartelas: lo que sobra (incluidas las de Google), y si no alcanza, se repite.
+// En el teléfono, la fila de Instagram suma además las fotos de portada que el teléfono oculta.
+const HERO = Math.min(5, Math.max(1, photos.length - 6));
+const rest = photos.slice(HERO);
+const igRow = rest.filter((p) => p.source === "instagram").slice(0, 3);
+// Las fotos que publica el negocio van antes que las de clientes en Google (calidad irregular, a veces con personas).
+const pillarPool = rest
+  .filter((p) => !igRow.includes(p))
+  .sort((a, b) => Number(b.source === "instagram") - Number(a.source === "instagram"));
+const pillarPhoto = (i: number) => pillarPool[i] ?? photo(i + 1);
+const pillarRatio = (i: number) => {
+  const p = pillarPhoto(i);
+  return p.width && p.height ? `${p.width} / ${p.height}` : "4 / 5";
+};
+const heroPhoneHidden = photos.slice(3, HERO);
+const igRatios = ["4 / 5", "1 / 1", "4 / 5", "3 / 4"];
+// Los cuadros de la portada: posición en la rejilla del muro (móvil 6×8, escritorio 12×14).
+const hang = [
+  { kind: "gilt-mat", tilt: -1.4, cls: "col-[1/4] row-[1/9] lg:col-[1/7] lg:row-[1/9]" },
+  { kind: "black", tilt: 1.6, cls: "col-[4/7] row-[1/5] lg:col-[7/11] lg:row-[1/6]" },
+  { kind: "black-mat", tilt: -1, cls: "col-[4/7] row-[5/9] lg:col-[7/12] lg:row-[6/15]" },
+  { kind: "gilt", tilt: 1.2, cls: "hidden lg:block lg:col-[1/5] lg:row-[9/15]" },
+  { kind: "gilt", tilt: 3.2, cls: "hidden lg:block lg:col-[11/13] lg:row-[2/5]" },
+  { kind: "black-mat", tilt: -2.6, cls: "hidden lg:block lg:col-[5/7] lg:row-[10/13]" },
+] as const;
+// Reseñas: la primera manda (cita grande); el resto cuelga con marcos, anchos y alturas distintos.
+const noteStyles = [
+  { kind: "black", offset: "lg:mt-0" },
+  { kind: "gilt-mat", offset: "lg:mt-14" },
+  { kind: "black-mat", offset: "lg:mt-4" },
+] as const;
+// La reseña más corta (después de la principal) cuelga bajo la principal para no dejar pared vacía.
+const restReviews = reviews.slice(1);
+const underLead = restReviews.length > 1 ? [...restReviews].sort((a, b) => a.text.length - b.text.length)[0] : undefined;
+const others = restReviews.filter((r) => r !== underLead);
+const leadQuote = (text: string) => (text.match(/^.{20,180}?[.!?…](\s|$)/)?.[0] ?? excerpt(text, 160).short).trim();
+// El usuario va en una sola línea de neón: el tamaño baja con su largo para no partirlo.
+const handleLen = (instagram?.username.length ?? 10) + 1;
+const handleSize = `font-size:clamp(1.5rem, ${(70 / handleLen).toFixed(2)}vw, ${Math.min(4, 100 / handleLen).toFixed(2)}rem)`;
+---
+
+<MuroBase>
+  <header class="sticky top-0 z-40 bg-wall/92 backdrop-blur-sm">
+    <nav class="mx-auto flex h-16 max-w-[1360px] items-center justify-between gap-6 px-4 sm:px-8" aria-label="Principal">
+      <a href="#inicio" class="font-display text-xl leading-tight sm:text-2xl">{business.name}</a>
+      <ul class="hidden items-center gap-7 text-[.95rem] text-chalk lg:flex">
+        <li><a href="#por-que" class="hover:text-plaster hover:underline">Por qué venir</a></li>
+        <li><a href="#carta" class="hover:text-plaster hover:underline">La carta</a></li>
+        <li><a href="#resenas" class="hover:text-plaster hover:underline">Reseñas</a></li>
+        <li><a href="#visita" class="hover:text-plaster hover:underline">Cómo llegar</a></li>
+      </ul>
+      <a href={reserve} target={external(reserve) ? "_blank" : undefined} rel="noopener" class="plaque !min-h-10 !px-4 !text-base">
+        <span class="sm:hidden">Reservar</span><span class="hidden sm:inline">{hero.primary_cta}</span>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- El muro: titular pintado y encendido a la izquierda, los cuadros colgados a la derecha.
+         Con brand.json "wall_texture": "brick", esta parte es ladrillo y una moldura la separa de la pared pintada. -->
+    <div class:list={[brick && "brick-wall"]} style={brickStyle}>
+    <section id="inicio" class="mx-auto grid max-w-[1360px] gap-x-12 gap-y-10 px-4 pt-8 pb-10 sm:px-8 lg:grid-cols-12 lg:pt-14 lg:pb-28" aria-labelledby="titular">
+      <h1 id="titular" class="text-[clamp(2.5rem,5.2vw,4.7rem)] leading-[1.04] tracking-[-0.01em] lg:col-span-6 lg:row-start-1 lg:self-end">
+        {before}{mark && <span class="neon neon-ignite mt-1 block text-[1.18em] leading-[1.1] tracking-normal">{mark}</span>}{after}
+      </h1>
+
+      <div class="hang grid grid-cols-6 grid-rows-[repeat(8,2.7rem)] gap-2.5 lg:col-span-6 lg:col-start-7 lg:row-span-2 lg:row-start-1 lg:grid-cols-12 lg:grid-rows-[repeat(14,2.45rem)]">
+        {hang.slice(0, HERO).map((h, i) => (
+          <div class={h.cls}><Frame photo={photo(i)} kind={h.kind} tilt={h.tilt} fill eager={i === 0} /></div>
+        ))}
+      </div>
+
+      <div class="lg:col-span-6 lg:row-start-2">
+        <p class="max-w-[48ch] text-lg leading-relaxed text-chalk">{hero.subheadline}</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href={reserve} target={external(reserve) ? "_blank" : undefined} rel="noopener" class="plaque">{hero.primary_cta}</a>
+          <a href={directionsUrl()} target="_blank" rel="noopener" class="plaque-line">{hero.secondary_cta}</a>
+        </div>
+        <p class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-[.95rem] text-chalk">
+          <span class="inline-flex items-center gap-2 text-brass"><Star value={business.rating} class="size-4" /></span>
+          <span>{formatRating(business.rating)} en {formatCount(business.review_count)} reseñas de Google</span>
+        </p>
+        <p class="mt-2 text-sm text-chalk">
+          {instagram?.followers ? `${formatCount(instagram.followers)} seguidores en Instagram · ` : ""}Reservas por {reserveVia()}.
+        </p>
+      </div>
+    </section>
+    </div>
+    {brick && <div class="molding" aria-hidden="true"></div>}
+
+    <!-- Por qué venir: retratos con su cartela de museo -->
+    <section id="por-que" class="mx-auto max-w-[1360px] scroll-mt-20 px-4 py-14 sm:px-8 lg:py-24">
+      <div class="grid gap-8 lg:grid-cols-12">
+        <h2 class="text-[clamp(2rem,3.8vw,3.3rem)] leading-[1.08] lg:col-span-6">{vp.title}</h2>
+        <p class="max-w-[58ch] self-end text-lg leading-relaxed text-chalk lg:col-span-5 lg:col-start-8">{vp.body}</p>
+      </div>
+      <div class="mt-12 space-y-12 lg:mt-16 lg:space-y-10">
+        {vp.pillars.map((p, i) => {
+          const flip = i % 2 === 1;
+          return (
+            <article class="hang grid items-center gap-8 lg:grid-cols-12">
+              <div class:list={["mx-auto w-full max-w-sm lg:max-w-none", flip ? "lg:col-span-4 lg:col-start-8 lg:row-start-1" : "lg:col-span-4 lg:col-start-2"]}>
+                <Frame photo={pillarPhoto(i)} kind={kinds[(i + 1) % kinds.length]} tilt={tilts[i + 2]} ratio={pillarRatio(i)} />
+              </div>
+              <div class:list={["label-card max-w-xl p-7 sm:p-9", flip ? "lg:col-span-5 lg:col-start-2 lg:row-start-1 lg:justify-self-end" : "lg:col-span-5 lg:col-start-7"]}>
+                <h3 class="text-2xl leading-tight sm:text-3xl">{p.title}</h3>
+                <p class="mt-3 leading-relaxed text-[#3d342f]">{p.body}</p>
+                <blockquote class="mt-6 border-t border-frame/15 pt-5">
+                  <p class="font-display text-lg leading-snug">“{p.evidence_quote}”</p>
+                  <footer class="mt-2 text-sm text-[#5a4f48]">{p.evidence_author}, en Google</footer>
+                </blockquote>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- La carta, enmarcada -->
+    <section id="carta" class="mx-auto max-w-[1360px] scroll-mt-20 px-4 py-14 sm:px-8 lg:py-24">
+      <div class="grid gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <h2 class="text-[clamp(2rem,3.8vw,3.3rem)] leading-[1.08]">{copy.services_title}</h2>
+          <p class="mt-5 max-w-[46ch] text-lg leading-relaxed text-chalk">{copy.services_intro}</p>
+        </div>
+        <div class="hang lg:col-span-7 lg:col-start-6">
+          <div class="frame frame-gilt frame-mat text-frame" style="--tilt:-0.4deg">
+            <ul class="divide-y divide-frame/15 px-2 sm:px-6">
+              {copy.services.map((s) => (
+                <li class="py-5">
+                  <div class="flex items-baseline gap-3">
+                    <h3 class="text-xl leading-tight sm:text-2xl">{s.name}</h3>
+                    <span class="mb-1 flex-1 border-b border-dotted border-frame/40" aria-hidden="true"></span>
+                    {s.tag && <span class="shrink-0 bg-brass px-2 py-0.5 text-xs font-semibold tracking-wide text-engrave uppercase">{s.tag}</span>}
+                  </div>
+                  <p class="mt-1.5 max-w-[60ch] leading-relaxed text-[#3d342f]">{s.description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lo que dicen: notas enmarcadas -->
+    <section id="resenas" class="scroll-mt-20 bg-wall-deep py-14 lg:py-24">
+      <div class="mx-auto max-w-[1360px] px-4 sm:px-8">
+        <div class="flex flex-wrap items-end justify-between gap-8">
+          <div class="max-w-2xl">
+            <h2 class="text-[clamp(2rem,3.8vw,3.3rem)] leading-[1.08]">{copy.reviews_title}</h2>
+            <p class="mt-5 text-lg leading-relaxed text-chalk">{copy.reviews_intro}</p>
+          </div>
+          <div class="plaque !h-auto !flex-col !items-start !gap-1 !px-6 !py-4">
+            <span class="flex items-baseline gap-3"><span class="text-4xl">{formatRating(business.rating)}</span><Star value={business.rating} class="size-4" /></span>
+            <span class="font-sans text-sm">{formatCount(business.review_count)} reseñas en Google</span>
+          </div>
+        </div>
+        <div class="mt-14 grid items-start gap-x-10 gap-y-10 lg:grid-cols-12">
+          <!-- Izquierda: la reseña principal y, colgada debajo, la más corta. Derecha: el resto en dos columnas. -->
+          <div class="space-y-10 lg:col-span-5">
+          {reviews[0] && (
+            <figure class="hang">
+              <div class="frame frame-gilt frame-mat text-frame" style={`--tilt:${tilts[0]}deg`}>
+                <span class="text-[#8a6a1f]"><Star value={reviews[0].rating} class="size-4" /></span>
+                <blockquote class="mt-4 font-display text-[clamp(1.6rem,2.6vw,2.3rem)] leading-[1.15]">“{leadQuote(reviews[0].text)}”</blockquote>
+                <details class="group mt-5">
+                  <summary class="cursor-pointer list-none font-semibold underline marker:hidden [&::-webkit-details-marker]:hidden">
+                    <span class="group-open:hidden">Leer la reseña completa</span><span class="hidden group-open:inline">Cerrar</span>
+                  </summary>
+                  <p class="mt-3 leading-relaxed">“{reviews[0].text}”</p>
+                </details>
+                <figcaption class="mt-5 flex justify-between gap-4 border-t border-frame/15 pt-3 text-sm text-[#5a4f48]">
+                  <span class="font-semibold">{reviews[0].author}</span><span>{reviewWhen(reviews[0].when)}</span>
+                </figcaption>
+              </div>
+            </figure>
+          )}
+          {underLead && <Note review={underLead} kind="black-mat" tilt={1.6} class="max-lg:mr-auto max-lg:w-[92%] lg:ml-16" />}
+          </div>
+          <div class="gap-10 lg:col-span-7 lg:columns-2 lg:pt-10">
+            {others.map((r, i) => {
+              const s = noteStyles[i % noteStyles.length];
+              return <Note review={r} kind={s.kind} tilt={tilts[(i + 1) % tilts.length]} class:list={["mb-10 break-inside-avoid max-lg:w-[92%]", i % 2 ? "max-lg:mr-auto" : "max-lg:ml-auto", s.offset]} />;
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {instagram && (
+      <section class="mx-auto max-w-[1360px] px-4 py-14 sm:px-8 lg:py-24" aria-labelledby="ig">
+        <div class="grid items-center gap-12 lg:grid-cols-12">
+          <div class="lg:col-span-5">
+            <h2 id="ig" class="neon neon-ignite leading-tight whitespace-nowrap" style={handleSize}>@{instagram.username}</h2>
+            <p class="mt-5 max-w-[42ch] text-lg leading-relaxed text-chalk">
+              {instagram.followers ? `${formatCount(instagram.followers)} personas siguen ${instagram.full_name ?? business.name} en Instagram.` : `${business.name} en Instagram.`}
+              {" "}Ahí publican sus gatos, actividades y novedades.
+            </p>
+            <a href={instagram.url} target="_blank" rel="noopener" class="plaque-line mt-8">Ver su Instagram</a>
+          </div>
+          <ul class="hang grid grid-cols-2 items-end gap-6 sm:grid-cols-3 lg:col-span-7 lg:grid-cols-4">
+            {[...heroPhoneHidden.map((p) => ({ p, phoneOnly: true })), ...igRow.map((p) => ({ p, phoneOnly: false }))].map(({ p, phoneOnly }, i) => (
+              <li class:list={[phoneOnly && "lg:hidden"]}>
+                <a href={p.url ?? instagram.url} target="_blank" rel="noopener" class="block" aria-label={p.alt ?? "Publicación en Instagram"}>
+                  <Frame photo={p} kind={i % 2 ? "black" : "gilt"} tilt={tilts[i % tilts.length]} ratio={igRatios[i % igRatios.length]} />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )}
+
+    <!-- La historia y lo que conviene saber -->
+    <section class="mx-auto max-w-[1360px] px-4 py-14 sm:px-8 lg:py-24">
+      <div class="grid gap-14 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <!-- El letrero de la casa: neón montado sobre su placa, con los tornillos a la vista -->
+          <div class="sign-plate relative inline-block px-7 py-6 sm:px-9">
+            {["top-2 left-2", "top-2 right-2", "bottom-2 left-2", "bottom-2 right-2"].map((p) => (
+              <span class:list={["absolute size-2 rounded-full bg-chalk/50", p]} aria-hidden="true"></span>
+            ))}
+            <h2 class="neon neon-ignite text-[clamp(2.2rem,4.2vw,3.6rem)] leading-[1.15]">{copy.story_title}</h2>
+          </div>
+          <p class="mt-6 text-lg leading-relaxed text-chalk">{copy.story_body}</p>
+        </div>
+        <div class="hang lg:col-span-6 lg:col-start-7">
+          <div class="frame frame-black frame-mat text-frame" style="--tilt:0.5deg">
+            <h3 class="px-1 text-2xl sm:text-3xl">Lo que todos preguntan</h3>
+            <div class="mt-4 divide-y divide-frame/15 border-t border-frame/15">
+              {copy.faq.map((f) => (
+                <details class="group">
+                  <summary class="flex cursor-pointer list-none items-center justify-between gap-6 px-1 py-4 font-semibold marker:hidden [&::-webkit-details-marker]:hidden">
+                    {f.question}
+                    <svg viewBox="0 0 16 16" class="size-4 shrink-0 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v12M2 8h12" /></svg>
+                  </summary>
+                  <p class="max-w-[60ch] px-1 pb-5 leading-relaxed text-[#3d342f]">{f.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visítanos -->
+    <section id="visita" class="mx-auto max-w-[1360px] scroll-mt-20 px-4 py-14 sm:px-8 lg:py-24">
+      <div class="grid gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <h2 class="text-[clamp(2rem,3.8vw,3.3rem)] leading-[1.08]">{copy.visit_title}</h2>
+          <p class="mt-5 max-w-[46ch] text-lg leading-relaxed text-chalk">{copy.visit_note}</p>
+          <dl class="mt-8 space-y-4 text-[1rem]">
+            <div><dt class="text-sm text-chalk">Dirección</dt><dd><a href={directionsUrl()} target="_blank" rel="noopener" class="underline">{business.address}</a></dd></div>
+            {business.phone && <div><dt class="text-sm text-chalk">Teléfono</dt><dd><a href={`tel:${phoneHref()}`} class="underline">{business.phone}</a></dd></div>}
+            {instagram && <div><dt class="text-sm text-chalk">Instagram</dt><dd><a href={instagram.url} target="_blank" rel="noopener" class="underline">@{instagram.username}</a></dd></div>}
+          </dl>
+          {hours.length > 0 && (
+            <div class="plaque mt-10 !h-auto !w-full !max-w-md !flex-col !items-stretch !gap-0 !px-6 !py-5">
+              <p class="font-display text-xl">Horario</p>
+              <table class="mt-3 w-full font-sans text-[.95rem]">
+                <tbody>
+                  {hours.map((h, i) => (
+                    <tr data-day={i} class="border-t border-engrave/20 data-today:font-bold">
+                      <th scope="row" class="py-1.5 text-left font-[inherit]">{h.day}</th>
+                      <td class="py-1.5 text-right tabular-nums">{h.hours}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+        <div class="hang lg:col-span-7">
+          <div class="frame frame-black h-full min-h-96" style="--tilt:-0.4deg">
+            <iframe title={`Mapa de ${business.name}`} src={mapsEmbed()} class="size-full min-h-96" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cierre: el letrero encendido, de vuelta sobre el ladrillo -->
+    {brick && <div class="molding" aria-hidden="true"></div>}
+    <section class:list={brick ? "brick-wall" : "bg-wall-deep"} style={brickStyle}>
+      <div class="mx-auto flex max-w-[1360px] flex-col gap-10 px-4 py-14 sm:px-8 lg:py-24 lg:flex-row lg:items-end lg:justify-between">
+        <div class="max-w-3xl">
+          <h2 class="neon text-[clamp(2.6rem,5.6vw,5rem)] leading-[1.1]">{copy.closing_title}</h2>
+          <p class="mt-6 max-w-[52ch] text-lg leading-relaxed text-chalk">{copy.closing_body}</p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href={reserve} target={external(reserve) ? "_blank" : undefined} rel="noopener" class="plaque">{hero.primary_cta}</a>
+          <a href={directionsUrl()} target="_blank" rel="noopener" class="plaque-line">{hero.secondary_cta}</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-wall-deep">
+    <div class="mx-auto flex max-w-[1360px] flex-col gap-2 border-t border-plaster/15 px-4 py-6 text-sm text-chalk sm:flex-row sm:justify-between sm:px-8">
+      <p>© {new Date().getFullYear()} {business.name}</p>
+      <p>Fotos: {instagram ? `@${instagram.username} en Instagram y ` : ""}Google Maps · Reseñas: Google</p>
+    </div>
+  </footer>
+</MuroBase>

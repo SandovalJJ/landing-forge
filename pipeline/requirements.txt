@@ -1,0 +1,6 @@
+anthropic>=0.70
+pydantic>=2.7
+requests>=2.32
+colorthief>=0.2.1
+python-dotenv>=1.0
+truststore>=0.10

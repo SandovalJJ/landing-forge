@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/assigned.html"
+        ],
+        "createdAt": "2026-10-25T18:23:28.063Z",
+        "reason": "Claude: throwaway decision-round skeleton sketch, not a shipping surface; rendered as bars on the decision page"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/pick.html"
+        ],
+        "createdAt": "2026-10-25T18:23:28.268Z",
+        "reason": "Claude: throwaway decision-round skeleton sketch, not a shipping surface; rendered as bars on the decision page"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/decision/canon.html"
+        ],
+        "createdAt": "2026-10-25T18:23:28.471Z",
+        "reason": "Claude: throwaway decision-round skeleton sketch, not a shipping surface; rendered as bars on the decision page"
+      }
+    ]
+  }
+}

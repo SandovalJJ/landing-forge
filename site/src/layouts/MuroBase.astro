@@ -1,0 +1,49 @@
+---
+import "../styles/muro.css";
+import { business, copy, palette, photo, instagram } from "../lib/site";
+
+// La pared y el neón: brand.json si el vendedor los fijó, si no la paleta automática.
+const wall = palette.wall ?? "#5c2a20";
+const neon = palette.neon ?? palette.accent ?? "#ff4fa3";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: business.name,
+  address: business.address,
+  telephone: business.phone_intl ?? business.phone,
+  url: business.website,
+  sameAs: instagram ? [instagram.url] : undefined,
+  image: photo(0).src,
+  geo: business.location && { "@type": "GeoCoordinates", latitude: business.location.lat, longitude: business.location.lng },
+  aggregateRating: business.rating && { "@type": "AggregateRating", ratingValue: business.rating, reviewCount: business.review_count },
+};
+---
+
+<!doctype html>
+<html lang="es" style={`--c-wall:${wall};--c-neon:${neon}`}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>document.documentElement.classList.add("js")</script>
+    <title>{copy.seo_title}</title>
+    <meta name="description" content={copy.seo_description} />
+    <meta name="theme-color" content={wall} />
+    <meta property="og:title" content={copy.seo_title} />
+    <meta property="og:description" content={copy.seo_description} />
+    <meta property="og:image" content={photo(0).src} />
+    <link rel="preload" as="image" href={photo(0).src} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body class="min-h-dvh overflow-x-clip">
+    <slot />
+    <script>
+      // Horario: Google lo entrega de lunes (0) a domingo (6).
+      const idx = (new Date().getDay() + 6) % 7;
+      document.querySelectorAll<HTMLElement>(`[data-day="${idx}"]`).forEach((el) => (el.dataset.today = ""));
+      document.querySelectorAll<HTMLElement>("[data-today-only]").forEach((el) => {
+        el.hidden = el.dataset.todayOnly !== String(idx);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+---
+import { business, copy, directionsUrl, phoneHref } from "../lib/site";
+const year = new Date().getFullYear();
+---
+
+<section class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+  <div class="relative isolate overflow-hidden rounded-3xl bg-accent px-6 py-14 text-accent-fg sm:px-12 lg:flex lg:items-end lg:justify-between lg:gap-12" data-reveal>
+    <div class="absolute inset-0 -z-10 opacity-20 [background-image:radial-gradient(currentColor_1px,transparent_1px)] [background-size:18px_18px] [mask-image:linear-gradient(to_left,#000,transparent_70%)]" aria-hidden="true"></div>
+    <div class="max-w-2xl">
+      <h2 class="text-4xl leading-tight font-bold tracking-tight sm:text-5xl">{copy.closing_title}</h2>
+      <p class="mt-4 text-lg leading-relaxed opacity-85">{copy.closing_body}</p>
+    </div>
+    <div class="mt-8 flex flex-wrap gap-3 lg:mt-0 lg:shrink-0">
+      <a href={phoneHref() ? `tel:${phoneHref()}` : directionsUrl()} class="btn bg-accent-fg text-accent hover:opacity-90">{copy.hero.primary_cta}</a>
+      <a href={directionsUrl()} target="_blank" rel="noopener" class="btn border border-current/30 hover:bg-current/10">{copy.hero.secondary_cta}</a>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-line">
+  <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-10 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+    <p>© {year} {business.name} · {business.short_address ?? business.address}</p>
+    <div class="flex gap-5">
+      {business.website && <a href={business.website} target="_blank" rel="noopener" class="hover:text-ink">Web / redes</a>}
+      <a href={directionsUrl()} target="_blank" rel="noopener" class="hover:text-ink">Google Maps</a>
+    </div>
+  </div>
+</footer>

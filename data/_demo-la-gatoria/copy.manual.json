@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "eyebrow": "Cat café · Laureles, Medellín",
+    "headline": "Almuerza vegetariano con gatos que buscan casa",
+    "headline_highlight": "gatos que buscan casa",
+    "subheadline": "Comida 100 % vegetariana, sodas de la casa y una sala llena de gatos rescatados. Lo que consumes ayuda a la fundación que los cuida.",
+    "primary_cta": "Reservar mesa",
+    "secondary_cta": "Cómo llegar"
+  },
+  "value_proposition": {
+    "title": "Vienes por los gatos, vuelves por la comida",
+    "body": "En más de dos mil reseñas se repiten tres cosas: los gatos están tranquilos y bien cuidados, la carta vegetariana sorprende incluso a quien come carne, y la visita apoya un proceso real de adopción.",
+    "pillars": [
+      {
+        "title": "Gatos tranquilos y cuidados",
+        "body": "Los gatos andan sueltos por el salón, a su ritmo. Nadie los obliga a cargar ni a posar.",
+        "evidence_quote": "Me encanta la labor, los gatos son súper juiciosos.",
+        "evidence_author": "Valentina Agudelo"
+      },
+      {
+        "title": "Carta 100 % vegetariana",
+        "body": "Entradas, platos y postres sin carne, más sodas preparadas en la casa.",
+        "evidence_quote": "Las sodas deliciosas, las dos entradas que pedimos 10/10.",
+        "evidence_author": "Laura Restrepo"
+      },
+      {
+        "title": "Tu consumo tiene destino",
+        "body": "Parte de cada visita sostiene a la fundación que rescata y da en adopción a los gatos.",
+        "evidence_quote": "Vale la pena y más si se sabe que es para esas cosas preciosas.",
+        "evidence_author": "Valentina Agudelo"
+      }
+    ]
+  },
+  "services_title": "La carta y la sala",
+  "services_intro": "Todo lo que pides sale de la misma cocina vegetariana. Todo lo que pagas ayuda a que un gato encuentre familia.",
+  "services": [
+    { "name": "Entradas para compartir", "description": "Platos pequeños pensados para la mesa, mientras algún gato decide si se sienta contigo.", "tag": "Vegetariano" },
+    { "name": "Platos fuertes", "description": "Almuerzo y comida sin carne, con porciones que llenan. Pregunta por las opciones veganas del día.", "tag": "" },
+    { "name": "Sodas de la casa", "description": "Sodas preparadas aquí mismo. De lo más mencionado en las reseñas.", "tag": "Favorito" },
+    { "name": "Postres", "description": "Para cerrar la visita. Los clientes recomiendan no saltárselos.", "tag": "" },
+    { "name": "Adopción responsable", "description": "Si te enamoras de alguno, el equipo te explica el proceso de adopción con la fundación.", "tag": "Fundación" }
+  ],
+  "story_title": "Un café que funciona como hogar de paso",
+  "story_body": "La Gatoria está en Laureles, en una casa con mesas adentro y afuera. Los gatos que ves son rescatados y esperan adopción; el café cubre su comida, su veterinario y su espacio. Por eso la entrada funciona con un consumo mínimo por persona: así la sala nunca se llena más de lo que los gatos aguantan.",
+  "reviews_title": "4,7 estrellas y más de dos mil opiniones",
+  "reviews_intro": "Leímos las reseñas de Google. Estas son algunas de las que mejor explican cómo es una visita.",
+  "faq": [
+    { "question": "¿Tengo que reservar?", "answer": "Sí, se recomienda. La reserva se paga por anticipado con el consumo mínimo por persona, que luego se descuenta de tu cuenta." },
+    { "question": "¿Cuánto cuesta entrar?", "answer": "No se cobra entrada aparte: hay un consumo mínimo por persona (alrededor de $25.000 COP según las reseñas recientes). Confírmalo al reservar." },
+    { "question": "¿Puedo adoptar un gato?", "answer": "Sí. Los gatos del café están en adopción con la fundación aliada; pregunta en el lugar por el proceso." },
+    { "question": "¿Hay opciones veganas?", "answer": "Toda la carta es vegetariana y varias preparaciones son veganas. Pregunta al hacer tu pedido." }
+  ],
+  "visit_title": "Cra. 80C #33-84, Laureles",
+  "visit_note": "Abre desde la 1 p. m. Reserva antes de ir, sobre todo los fines de semana.",
+  "closing_title": "Hay un gato esperando que llegues",
+  "closing_body": "Reserva tu mesa, pide una soda de la casa y pasa la tarde con ellos.",
+  "seo_title": "La Gatoria Cat Cafe · Café vegetariano con gatos en Laureles",
+  "seo_description": "Cat café en Laureles, Medellín: comida 100 % vegetariana y gatos rescatados en adopción. 4,7★ en Google. Reserva tu mesa."
+}

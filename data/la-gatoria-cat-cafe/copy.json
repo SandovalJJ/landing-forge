@@ -1,0 +1,96 @@
+{
+  "story_title": "La Casa de los Gatos Felices",
+  "story_body": "En Instagram se presentan como La Casa de los Gatos Felices, y el nombre explica bastante. Muchos de los michis que viven en esta casa de la Carrera 80C llegaron después del abandono. Aquí reciben comida, tratamientos y rincones pensados para ellos. Alrededor de esa casa funcionan un café vegetariano, una tienda de mascotas y, desde hace poco, una sala de cine. Las reglas que te explican en la puerta existen para su bienestar.",
+  "reviews_title": "Lo que cuentan quienes ya fueron",
+  "reviews_intro": "4,7 estrellas en más de 2.200 reseñas. Hay quien ha ido más de diez veces, quien celebró allí su cumpleaños y quien llegó con su mamá. Casi todos nombran un postre y un gato.",
+  "faq": [
+    {
+      "question": "¿Hay que reservar?",
+      "answer": "Sí. Atienden solo con reserva, por el espacio y por la tranquilidad de los gatos. Escríbeles por Instagram; en las reseñas cuentan que responden rápido."
+    },
+    {
+      "question": "¿Pueden ir niños?",
+      "answer": "Desde los 10 años. Es una casa para gente que llega con calma y respeta el ritmo de los michis."
+    },
+    {
+      "question": "¿Cuánto se gasta?",
+      "answer": "El rango está entre 40.000 y 60.000 pesos. Aparte puedes comprar Churu para los gatos o algo en la tienda de mascotas. Una clienta frecuente lo resume así: es un lugar donde no duele gastar."
+    },
+    {
+      "question": "¿Puedo cargar a los gatos?",
+      "answer": "Ellos deciden. Se acercan cuando quieren y no siempre salen todos. Al llegar te explican las reglas de la casa; la idea es esperar y dejar que el gato dé el primer paso."
+    }
+  ],
+  "visit_title": "Antes de ir",
+  "visit_note": "Reserva con anticipación por mensaje: sin reserva no hay entrada, y los fines de semana el espacio se llena con cumpleaños y planes en grupo.",
+  "closing_title": "Reserva tu tarde con los michis",
+  "closing_body": "Escribe por Instagram, elige el día y llega sin afán. Abren todos los días desde la tarde: de lunes a jueves de 2 a 8 p. m., viernes de 1 a 8, sábado hasta las 9 y domingo hasta las 7.",
+  "seo_title": "La Gatoria Cat Cafe | Café vegetariano con gatos, Medellín",
+  "seo_description": "Cat café vegetariano en Laureles, Medellín. Waffles de yuca, limonada de coco y unos 18 gatos rescatados. Solo con reserva, desde los 10 años.",
+  "hero": {
+    "eyebrow": "Cat café vegetariano · Laureles",
+    "headline": "Comida vegetariana en la casa de los gatos",
+    "headline_highlight": "casa de los gatos",
+    "subheadline": "Waffles de yuca, limonada de coco y una tarde tranquila con unos 18 michis rescatados en Laureles. Se atiende solo con reserva y desde los 10 años.",
+    "primary_cta": "Reservar visita",
+    "secondary_cta": "Cómo llegar"
+  },
+  "value_proposition": {
+    "title": "Gatos bien cuidados y comida vegetariana rica",
+    "body": "Aquí los gatos viven y la visita eres tú. Al llegar te explican las reglas y te dan un recorrido por la casa. Mientras los michis se acercan cuando quieren, pides algo de una carta vegetariana con platos salados, postres y cócteles.",
+    "pillars": [
+      {
+        "title": "Los gatos mandan en casa",
+        "body": "Hay entre 15 y 18 gatos y no siempre salen todos: depende de su ánimo. Las reglas existen para cuidarlos, y se nota en la limpieza y el orden.",
+        "evidence_quote": "el establecimiento resalta por su limpieza, organización y sobre todo bien cuidado de todos sus gatitos",
+        "evidence_author": "Mar Mora"
+      },
+      {
+        "title": "Vegetariano que sabe bien",
+        "body": "Toda la carta es vegetariana: ensaladas, papas, platos fuertes y waffles hechos con yuca. Los postres son lo que más se repite en las reseñas.",
+        "evidence_quote": "la comida es vegetariana y sumado a eso es super deliciosa",
+        "evidence_author": "Valeria Echeverri"
+      },
+      {
+        "title": "Una tarde para bajar el ritmo",
+        "body": "El lugar es para gente que viene tranquila. Hay asientos al aire libre, recorrido guiado y tiempo para sentarse sin afán mientras un gato decide si se acerca.",
+        "evidence_quote": "El ambiente súper tranquilo, como pa’ desconectarse del mundo, relajarse y parcharse un rato.",
+        "evidence_author": "Laura Restrepo"
+      }
+    ]
+  },
+  "services_title": "Qué hay en la casa",
+  "services_intro": "Comida vegetariana, ratos con los michis y algunos planes extra. Para todo, escribe antes y reserva: el espacio es de ellos.",
+  "services": [
+    {
+      "name": "Carta salada",
+      "description": "Entradas y platos fuertes vegetarianos. Los que más nombran: la ensalada de las hadas, el angelito punkero y las papas punkeritas.",
+      "tag": "Vegetariano"
+    },
+    {
+      "name": "Waffles de yuca y postres",
+      "description": "Dos waffles hechos con yuca, como el enriquito fortachón, y un flan que aparece en varias reseñas.",
+      "tag": "Dulce"
+    },
+    {
+      "name": "Sodas, limonadas y cócteles",
+      "description": "Sodas de la casa, limonada de coco, la gata engreída y cócteles para acompañar la tarde.",
+      "tag": ""
+    },
+    {
+      "name": "Recorrido, cookie time y Churu",
+      "description": "Te muestran la casa y sus rincones para gatos. Hay hora de galletitas para dárselas a ellos, y el Churu se compra en la tienda del lugar.",
+      "tag": "Con michis"
+    },
+    {
+      "name": "Yoga entre gatos y encuentros",
+      "description": "Clases de yoga con los michis rondando y encuentros especiales, como el homenaje a los animales que ya partieron. Las fechas salen en Instagram.",
+      "tag": "Eventos"
+    },
+    {
+      "name": "Teatro Orión",
+      "description": "Una sala dentro de la casa con películas cada ocho días. También se puede reservar para cumpleaños y celebraciones.",
+      "tag": "Nuevo"
+    }
+  ]
+}

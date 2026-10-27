@@ -1,0 +1,31 @@
+{
+  "source_images": [
+    "ig-1.jpg",
+    "ig-2.jpg",
+    "ig-3.jpg",
+    "ig-4.jpg",
+    "ig-5.jpg"
+  ],
+  "extracted": [
+    "#a8907c",
+    "#170f0d",
+    "#8c5b30",
+    "#5e3416",
+    "#d2d9df",
+    "#b8c0cc"
+  ],
+  "dominant": "#a8917d",
+  "tokens": {
+    "bg": "#fbf8f6",
+    "surface": "#fefefd",
+    "ink": "#241c14",
+    "muted": "#6f6052",
+    "border": "#e8e0d9",
+    "accent": "#8c5b30",
+    "accent-2": "#a58440",
+    "accent-fg": "#ffffff",
+    "accent-soft": "#f5eae1",
+    "wall": "#5b3b1f",
+    "neon": "#ff9d47"
+  }
+}

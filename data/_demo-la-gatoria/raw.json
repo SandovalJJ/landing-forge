@@ -1,0 +1,44 @@
+{
+  "_demo": "Datos parciales tomados a mano de la ficha pública de Google Maps (oct 2026). Fotos = placeholders. Ejecuta scrape.py con tu API key para datos completos.",
+  "source": "manual",
+  "place_id": null,
+  "name": "La Gatoria Cat Cafe",
+  "category": "Restaurante vegetariano",
+  "types": ["cat_cafe", "vegetarian_restaurant", "cafe"],
+  "rating": 4.7,
+  "review_count": 2215,
+  "address": "Cra. 80C #33-84, Laureles - Estadio, Medellín, Antioquia",
+  "short_address": "Cra. 80C #33-84, Laureles, Medellín",
+  "city": "Medellín",
+  "phone": "305 3949391",
+  "phone_intl": "+57 305 3949391",
+  "website": null,
+  "maps_url": "https://www.google.com/maps/place/La+Gatoria+Cat+Cafe/@6.2397395,-75.6022456,18z/data=!4m6!3m5!1s0x8e4429bdac0b30d5:0xdba1872850386612!8m2!3d6.2397395!4d-75.6022456",
+  "location": { "lat": 6.2397395, "lng": -75.6022456 },
+  "summary": "Cafetería tranquila con comida ligera y postres, asientos al aire libre y ambiente con temática felina.",
+  "price_level": null,
+  "hours": [],
+  "reviews": [
+    {
+      "author": "Valentina Agudelo",
+      "rating": 5,
+      "text": "Es hermoso!! Me encanta la labor, los gatos son súper juiciosos. La comida es deliciosa! Toda es vegetariana, lo que más me encanta. Es un poco costoso, debes reservar y pagar por anticipado el valor mínimo de cada persona ($25.000) pero vale la pena.",
+      "when": "Hace 8 meses"
+    },
+    {
+      "author": "Laura Restrepo",
+      "rating": 5,
+      "text": "Fui a La Gatoria y quedé MATADA. Amé, amé y amé. Las sodas deliciosas, las dos entradas que pedimos 10/10 y los postres ni se diga.",
+      "when": "Hace 5 meses"
+    }
+  ],
+  "slug": "la-gatoria-cat-cafe",
+  "photos": [
+    { "file": "photo-1.svg", "width": 1200, "height": 1200, "attribution": "placeholder" },
+    { "file": "photo-2.svg", "width": 1200, "height": 1200, "attribution": "placeholder" },
+    { "file": "photo-3.svg", "width": 1200, "height": 1200, "attribution": "placeholder" },
+    { "file": "photo-4.svg", "width": 1200, "height": 1200, "attribution": "placeholder" },
+    { "file": "photo-5.svg", "width": 1200, "height": 1200, "attribution": "placeholder" },
+    { "file": "photo-6.svg", "width": 1200, "height": 1200, "attribution": "placeholder" }
+  ]
+}
